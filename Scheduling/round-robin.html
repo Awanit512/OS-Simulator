@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -135,7 +135,7 @@ $(document).ready(function(){
       console.log(Q);
         if(Q.length>0)
           var index=Dequeue();
-        else 
+        else
         {
           index=null;
           if(temp!=index)
@@ -156,7 +156,7 @@ $(document).ready(function(){
             if(stuff[j].at<=time && stuff[j].finish==0 && stuff[j].check==0 && Q.indexOf(j)==-1){
               Enqueue(j);
             }
-           
+
           }
         }
         console.log(index);
@@ -203,7 +203,7 @@ $(document).ready(function(){
             if(stuff[j].at<=time && stuff[j].finish==0 && stuff[j].check==0 && Q.indexOf(j)==-1){
               Enqueue(j);
             }
-            
+
           }
         }
         else if(index!=null && stuff[index].rt[stuff[index].point]>tq && stuff[index].finish==0 && stuff[index].check!=1)
@@ -234,7 +234,7 @@ $(document).ready(function(){
           }
             Enqueue(index);
             console.log(Q);
-            
+
           }
       }
     sequence.push({start:time,n:-1});
@@ -260,7 +260,7 @@ $(document).ready(function(){
       }
     }
     cpu_efficiency=(time-sum_null)/time*100;
-  
+
 }
 function Enqueue(i){
   Q.push(i);
@@ -393,11 +393,11 @@ p{
   </thead>
 </table>
   </div>
-  <input type='number' id='at1' placeholder="arrival time"></input>
-  <input type='number' id='bt1' placeholder="burst time 1"></input>
+  <input type='number' min="0" id='at1' placeholder="arrival time"></input>
+  <input type='number' min="0" id='bt1' placeholder="burst time 1"></input>
   <button id="add" class="btn" onclick="AddtoList()">Add</button>
   <br>
-  <input type='number' id="tq" placeholder="Time quantum"></input> 
+  <input type='number' min="0" id="tq" placeholder="Time quantum"></input>
   <button id="start" class="btn">Start</button>
   <br>
   <br>

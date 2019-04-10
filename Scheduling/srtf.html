@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -350,10 +350,10 @@ p{
   </thead>
 </table>
   </div>
-  <input type='number' id='at1' placeholder="arrival time"></input>
-  <input type='number' id='bt1' placeholder="burst time 1"></input>
-  <input type='number' id='io' placeholder="io time"></input>
-  <input type='number' id='bt2' placeholder="burst time 2"></input>
+  <input type='number' min="0" id='at1' placeholder="arrival time"></input>
+  <input type='number' min="0" id='bt1' placeholder="burst time 1"></input>
+  <input type='number' min="0" id='io' placeholder="io time"></input>
+  <input type='number' min="0" id='bt2' placeholder="burst time 2"></input>
   <button id="add" class="btn" onclick="AddtoList()">Add</button>
   <br>
   <button id="start" class="btn">Start</button>
