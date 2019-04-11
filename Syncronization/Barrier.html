@@ -36,7 +36,7 @@ opacity: 1;
 }
 </head>
 
-<body style="height:1500px" class="heading">
+<body style="background-color:#FFE4B5;height:1500px" class="heading">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -51,7 +51,7 @@ opacity: 1;
 </nav>
  <br><br><br>
   <div class="page-header "  >
-    <h1 style="float:center">Barrier Semaphore</h1>      
+    <h1 style="background-color:#CCCC00;float:center"><marquee><b>Barrier Semaphore</b></marquee></h1>      
   </div>
  
 <!--  <div >
@@ -66,7 +66,7 @@ opacity: 1;
 
      <div>
       <form>
-        <textarea id="doc" style="height:28%;width:15%;position:absolute;left:3%;font-size:17px; color : white; background-color:black;border:solid 2px orange; " disabled="">
+        <textarea id="doc" style="height:46%;width:15%;position:absolute;left:2%;font-size:17px; color : black; background-color:#BDB76B;border:solid 2px black; " disabled="">
 void Barrier
 {
 	while(process_arrived!=0);
@@ -89,14 +89,14 @@ V(S)
     </div>
 
 
- <button class="btn btn-primary" id ="prod", type ="button", onclick ="barrieradd()", style ="height:10%;width:15%;position:absolute;top:25%;left:45%;font-size:25px">Produce</button>
+ <button class="btn btn-primary" id ="prod", type ="button", onclick ="barrieradd()", style ="height:10%;width:300px;position:absolute;top:28%;left:20%;border:solid 4px black;font-size:25px">Produce</button>
       
-<button class="btn btn-primary" type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:20%;left:20%;font-size:17px">Press on Produce </button>
+<button class="btn btn-primary" type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:18%;left:20%;border:solid 4px black;background-color:#E0FFFF;font-size:17px;color : black">Press on Produce </button>
 
 
-<button class="btn btn-primary" type = "button", id ="cross", name = "cross", onclick="cross()" ,  style="height:10%;width:15%;position:absolute;top:25%;left:65%;font-size:17px" disabled="">Cross the barrier </button>
+<button class="btn btn-primary" type = "button", id ="cross", name = "cross", onclick="cross()" ,  style="height:10%;width:15%;position:absolute;top:28%;left:50%;border:solid 4px black;font-size:17px" disabled="">Cross the barrier </button>
 
-<button class="btn btn-primary" type = "button", id ="num2", name = "num1", onclick ="restart()", style="height:10%;width:15%;position:absolute;top:25%;left:85%;font-size:17px">Restart</button>
+<button class="btn btn-primary" type = "button", id ="num2", name = "num1", onclick ="restart()", style="height:10%;width:300px;position:absolute;top:28%;left:80%;border:solid 4px black;font-size:17px">Restart</button>
 
 
 <!-- 
@@ -108,58 +108,58 @@ V(S)
 
 
 
-<button type = "button", id ="num1", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:30%;left:20%;font-size:17px">Processes near the barrier : </button>
+<button type = "button", id ="num1", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:18%;left:80%;border:solid 4px black;background-color:#E0FFFF;font-size:17px;color : black">Processes near the barrier : </button>
 
 
-<div type = "button", id ="one1", name = "one1", style="height:10%;width:9%;position:absolute;top:50%;left:20%;background-color:#ff0101;" > </div>
+<div type = "button", id ="one1", name = "one1", style="height:10%;width:9%;position:absolute;top:50%;border:solid 4px black;left:20%;background-color:#ff0101;" > </div>
 
-    <div type = "button", id ="two1", name = "two1", style="height:10%;width:9%;position:absolute;top:62%;left:30%;background-color:#ff0101;"> 
+    <div type = "button", id ="two1", name = "two1", style="height:10%;width:9%;position:absolute;top:62%;border:solid 4px black;left:30%;background-color:#ff0101;"> 
   </div>
     
-    <div type = "button", id ="three1", name = "three1", style="height:10%;width:9%;position:absolute;top:74%;left:15%;background-color:#ff0101;">  </div>
+    <div type = "button", id ="three1", name = "three1", style="height:10%;width:9%;position:absolute;top:74%;border:solid 4px black;left:15%;background-color:#ff0101;">  </div>
 
   
-    <div type = "button", id ="four1", name = "four1", style="height:10%;width:9%;position:absolute;top:86%;left:39%;background-color:#ff0101;"> </div>
+    <div type = "button", id ="four1", name = "four1", style="height:10%;width:9%;position:absolute;top:86%;border:solid 4px black;left:39%;background-color:#ff0101;"> </div>
   
-    <div type = "button", id ="five1", name = "five1", style="height:10%;width:9%;position:absolute;top:98%;left:25%;background-color:#ff0101;"></div>
+    <div type = "button", id ="five1", name = "five1", style="height:10%;width:9%;position:absolute;top:98%;border:solid 4px black;left:25%;background-color:#ff0101;"></div>
 
  
 
 
 
-    <div type = "button", id ="one", name = "one", style="height:10%;width:9%;position:absolute;top:50%;left:45%;background-color:white;visibility:hidden" > </div>
+    <div type = "button", id ="one", name = "one", style="height:10%;width:9%;position:absolute;top:50%;border:solid 4px black;left:45%;background-color:white;visibility:hidden" > </div>
 
-    <div type = "button", id ="two", name = "two", style="height:10%;width:9%;position:absolute;top:62%;left:45%;background-color:white;visibility:hidden"> </div>
+    <div type = "button", id ="two", name = "two", style="height:10%;width:9%;position:absolute;top:62%;border:solid 4px black;left:45%;background-color:white;visibility:hidden"> </div>
   
-    <div type = "button", id ="three", name = "three", style="height:10%;width:9%;position:absolute;top:74%;left:45%;background-color:white;visibility:hidden"></div>
+    <div type = "button", id ="three", name = "three", style="height:10%;width:9%;position:absolute;top:74%;border:solid 4px black;left:45%;background-color:white;visibility:hidden"></div>
   
-    <div type = "button", id ="four", name = "four", style="height:10%;width:9%;position:absolute;top:86%;left:45%;background-color:white;visibility:hidden"> </div>
+    <div type = "button", id ="four", name = "four", style="height:10%;width:9%;position:absolute;top:86%;border:solid 4px black;left:45%;background-color:white;visibility:hidden"> </div>
   
-    <div type = "button", id ="five", name = "five", style="height:10%;width:9%;position:absolute;top:98%;left:45%;background-color:white;visibility:hidden"></div>
+    <div type = "button", id ="five", name = "five", style="height:10%;width:9%;position:absolute;top:98%;border:solid 4px black;left:45%;background-color:white;visibility:hidden"></div>
 
 
 
 
 
-       <div type = "button", id ="one2", name = "one2", style="height:10%;width:9%;position:absolute;top:50%;left:65%;background-color:#02f401;visibility:hidden" > </div>
+       <div type = "button", id ="one2", name = "one2", style="height:10%;width:9%;position:absolute;top:50%;border:solid 4px black;left:65%;background-color:#02f401;visibility:hidden" > </div>
 
-    <div type = "button", id ="two2", name = "two2", style="height:10%;width:9%;position:absolute;top:62%;left:75%;background-color:#02f401;visibility:hidden;"> </div>
+    <div type = "button", id ="two2", name = "two2", style="height:10%;width:9%;position:absolute;top:62%;border:solid 4px black;left:75%;background-color:#02f401;visibility:hidden;"> </div>
   
-    <div type = "button", id ="three2", name = "three2", style="height:10%;width:9%;position:absolute;top:74%;left:60%;background-color:#02f401;visibility:hidden"></div>
+    <div type = "button", id ="three2", name = "three2", style="height:10%;width:9%;position:absolute;top:74%;border:solid 4px black;left:60%;background-color:#02f401;visibility:hidden"></div>
   
-    <div type = "button", id ="four2", name = "four2", style="height:10%;width:9%;position:absolute;top:86%;left:79%;background-color:#02f401;visibility:hidden"> </div>
+    <div type = "button", id ="four2", name = "four2", style="height:10%;width:9%;position:absolute;top:86%;border:solid 4px black;left:79%;background-color:#02f401;visibility:hidden"> </div>
   
-    <div type = "button", id ="five2", name = "five2", style="height:10%;width:9%;position:absolute;top:98%;left:72%;background-color:#02f401;visibility:hidden"></div>
+    <div type = "button", id ="five2", name = "five2", style="height:10%;width:9%;position:absolute;top:98%;border:solid 4px black;left:72%;background-color:#02f401;visibility:hidden"></div>
 <p id="vl" ></p>
-<h1 style="top:40%;left:75%;position: absolute;">After Barrier</h1>
+<h1 style="top:40%;left:77%;position: absolute;">After Barrier</h1>
 
-<h1 style="top:40%;left:50%;position: absolute;">Barrier</h1>
+<h1 style="top:40%;left:54%;position: absolute;">Barrier</h1>
 <style>
 #vl {
-    border-left: 6px solid green;
+    border-left: 8px solid green;
     height: 70%;
     position: absolute;
-    left: 54%;
+    left: 57%;
     margin-left: -3px;
     top: 47%;
 }
