@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -173,7 +173,7 @@ $(document).ready(function(){
     //rr();
     console.log(stuff);
     drawChart();
-    
+
   })
   var Q=[];
     function drawChart(){
@@ -1013,7 +1013,7 @@ var proc=[];
     average_wt_prnonpre=sum_at/n;
 
     var pixel = 0;
-  } 
+  }
   var Q1=[];
   Q=[];
 
@@ -1078,7 +1078,7 @@ var proc=[];
             if(stuff[j].at<=time && stuff[j].finish==0 && stuff[j].check==0 && Q.indexOf(j)==-1){
               Enqueue(j);
             }
-           
+
           }
           temp=null;
         }
@@ -1103,7 +1103,7 @@ var proc=[];
             for(j=0;j<n;j++)
             {
               if( stuff[j].at<=time && stuff[j].check==1)
-              { 
+              {
                 stuff[j].rt[1]-=r;
                 if(stuff[j].rt[1]<=0)
                 {
@@ -1114,7 +1114,7 @@ var proc=[];
               if(stuff[j].at<=time && stuff[j].finish==0 && stuff[j].check==0 && Q.indexOf(j)==-1){
                 Enqueue(j);
               }
-            
+
             }
           }
           else if(stuff[index].point==2)
@@ -1139,7 +1139,7 @@ var proc=[];
             if(stuff[j].at<=time && stuff[j].finish==0 && stuff[j].check==0 && Q.indexOf(j)==-1){
               Enqueue(j);
             }
-            
+
           }
           }
           temp=index;
@@ -1172,7 +1172,7 @@ var proc=[];
           }
             Enqueue(index);
             console.log(Q);
-            
+
           }
       }
     var sum_wt=0;
@@ -1189,7 +1189,7 @@ var proc=[];
         sum_null+=sequence[i+1].start-sequence[i].start;
       }
     }
-    cpu_efficiency=((time-sum_null)/time)*100;  
+    cpu_efficiency=((time-sum_null)/time)*100;
 }
 
   function displayBlock(i){
@@ -1290,14 +1290,14 @@ p{
   </thead>
 </table>
   </div>
-  <input type='number' id='at1' placeholder="arrival time"></input>
-  <input type='number' id='bt1' placeholder="burst time 1"></input>
-  <input type='number' id='io' placeholder="io time"></input>
-  <input type='number' id='bt2' placeholder="burst time 2"></input>
-  <input type='number' id='priority' placeholder="priority"></input>
+  <input type='number' min="0" id='at1' placeholder="arrival time"></input>
+  <input type='number' min="0"id='bt1' placeholder="burst time 1"></input>
+  <input type='number' min="0" id='io' placeholder="io time"></input>
+  <input type='number' min="0" id='bt2' placeholder="burst time 2"></input>
+  <input type='number' min="0" id='priority' placeholder="priority"></input>
   <button id="add" class="btn" onclick="AddtoList()">Add</button>
   <br><br>
-  <input id="timeq" type="number" placeholder="Time quantum"></input>
+  <input id="timeq" min="0" type="number" placeholder="Time quantum"></input>
   <button id="start" class="btn">Start</button>
   <br>
   <canvas id="bar-chart" width="800" height="450"></canvas>

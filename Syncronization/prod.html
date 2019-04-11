@@ -9,9 +9,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-<body style="height:1500px">
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<body style="background-color:#FFE4B5;height:1500px">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">OS simulator</a>
@@ -24,12 +23,13 @@
 </nav>
  <br><br><br>
   <div class="page-header" >
-    <h1 style="float:center">Producer Consumer</h1>      
+
+    <h1 style="background-color:#CCCC00;float:center"><marquee><b>Producer Consumer</b></marquee> </h1>      
   </div>
 
   <div>
       <form>
-        <textarea id="doc" style="height:28%;width:15%;position:absolute;left:3%;font-size:17px; color : white; background-color:black;border:solid 2px orange; " disabled="">
+        <textarea id="doc" style="height:40%;width:15%;position:absolute;left:3%;font-size:17px; color :black; background-color:#BDB76B  ;border:solid 2px black; " disabled="">
 while(1)
   {
       /* produce an item in next_produced */
@@ -47,7 +47,7 @@ while(1)
 
     <div>
       <form>
-        <textarea id="doc" style="height:28%;width:15%;position:absolute;right:3%;font-size:17px;color : white; background-color:black;border:solid 2px orange; " disabled="">
+        <textarea id="doc" style="height:40%;width:15%;position:absolute;right:3%;font-size:17px;color : black; background-color:#BDB76B ;border:solid 2px black; " disabled="">
  while(1)
   {
       while(counter == 0)
@@ -67,35 +67,35 @@ while(1)
 
 
 
- <button class="btn btn-primary" id ="prod", type ="button", onclick ="barrieradd()", style ="height:10%;width:15%;position:absolute;top:25%;left:45%;font-size:25px;">Next Chance</button>
+ <button class="btn btn-primary" id ="prod", type ="button", onclick ="barrieradd()", style ="height:10%;width:15%;position:absolute;top:25%;left:42%;font-size:25px;border:solid 4px black;">Next Chance</button>
 
-<button class="btn btn-primary" id ="prod1", type ="button", style ="height:10%;width:12%;position:absolute;top:80%;left:15%;font-size:25px;background: red;" disabled="">Produce</button>
+<button class="btn btn-primary" id ="prod1", type ="button", style ="height:10%;width:12%;position:absolute;top:80%;left:15%;font-size:25px;background: red;border:solid 4px black;" disabled="">Produce</button>
 
- <button class="btn btn-primary" id ="con", type ="button", style ="height:10%;width:12%;position:absolute;top:80%;right:15%;font-size:25px;background: red;" disabled="">Consume</button>
+ <button class="btn btn-primary" id ="con", type ="button", style ="height:10%;width:12%;position:absolute;top:80%;right:15%;font-size:25px;background: red;border:solid 4px black;" disabled="">Consume</button>
 
 
 
-<button class="btn btn-primary" type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:30%;left:20%;font-size:17px">Press on Produce </button>
-<button class="btn btn-primary" type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:22%;left:20%;font-size:17px">Buffer size:5 </button>
+<button class="btn btn-primary" type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:25%;left:63%;border:solid 4px black;font-size:17px">Press on Produce </button>
+<button class="btn btn-primary" type = "button", id ="num", name = "num", class = "btn btn-primary", style="height:70px;width:300px;position:absolute;top:25%;left:20%;border:solid 4px black;font-size:17px">Buffer size:5 </button>
 
-<button type = "button", id ="one", name = "one", style="height:100px;width:165px;position:absolute;top:50%;left:45%;background-color:white"> </button>
+<button type = "button", id ="one", name = "one", style="height:100px;width:165px;position:absolute;border:solid 4px black;top:50%;left:45%;background-color:white"> </button>
   
-    <button type = "button", id ="two", name = "two", style="height:100px;width:165px;position:absolute;top:65%;left:45%;background-color:white"> </button>
+    <button type = "button", id ="two", name = "two", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:65%;left:45%;background-color:white"> </button>
   
-    <button type = "button", id ="three", name = "three", style="height:100px;width:165px;position:absolute;top:80%;left:45%;background-color:white"> </button>
+    <button type = "button", id ="three", name = "three", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:80%;left:45%;background-color:white"> </button>
   
-    <button type = "button", id ="four", name = "four", style="height:100px;width:165px;position:absolute;top:95%;left:45%;background-color:white"> </button>
+    <button type = "button", id ="four", name = "four", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:95%;left:45%;background-color:white"> </button>
   
-    <button type = "button", id ="five", name = "five", style="height:100px;width:165px;position:absolute;top:110%;left:45%;background-color:white"> </button>
+    <button type = "button", id ="five", name = "five", style="height:100px;width:165px;border:solid 4px black;position:absolute;top:110%;left:45%;background-color:white"> </button>
 
 
-    <button class="btn btn-warning" id ="count", type ="button" style ="height:100px;width:165px;position:absolute;top:30%;left:66%;">counter = 0</button>
+    <button class="btn btn-warning" id ="count", type ="button" style ="height:100px;width:165px;border:solid 4px black;position:absolute;top:38%;left:45%;">counter = 0</button>
 
    </body>
 
 
 <script type="text/javascript">
-	 var queue = [0,0,0,0,0]; var flag=0;
+   var queue = [0,0,0,0,0]; var flag=0;
       var rear =-1; var front =-1;
 
       function counter()
@@ -250,33 +250,33 @@ while(1)
 
               if(flag==0 && num==1)
               {
-              	              	 		              alert("No item to consume for the consumer!");		          
-              	                  	document.getElementById("num").innerHTML = "No item to consume";
+                                                  alert("No item to consume for the consumer!");              
+                                    document.getElementById("num").innerHTML = "No item to consume";
               }
 
             else if(flag==5 && num==0)
               {
 
-              	                  	document.getElementById("num").innerHTML = "buffer Full to produce";
- 										alert("Buffer full can't add the produced item to the buffer!");		                            
+                                    document.getElementById("num").innerHTML = "buffer Full to produce";
+                    alert("Buffer full can't add the produced item to the buffer!");                                
               }
            else if(num==0)
                   {     
 
-                  	document.getElementById("prod1").style.backgroundColor='green';
+                    document.getElementById("prod1").style.backgroundColor='green';
            document.getElementById("con").style.backgroundColor='red';
 
-                  	document.getElementById("num").innerHTML = "producer";
-       				produce();
-       			}
+                    document.getElementById("num").innerHTML = "producer";
+              produce();
+            }
            else
            {
-					document.getElementById("con").style.backgroundColor='green';
-          		  document.getElementById("prod1").style.backgroundColor='red';
+          document.getElementById("con").style.backgroundColor='green';
+                document.getElementById("prod1").style.backgroundColor='red';
 
 
                     document.getElementById("num").innerHTML = "consumer";
-           			consume();
+                consume();
            }
 
 
