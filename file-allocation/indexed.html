@@ -44,7 +44,7 @@
 <center><h1 class="some" behavior="alternate" scrollamount=10>Indexed Allocation</h1></center>
 <div id="sequ">
 	<div class="visible1">
-	<p> Enter the size of memory(in KB)</p>
+	<p> Enter the size of memory(number of blocks)</p>
 	<input id="nof" type="number">
 	<button class="s_done" onclick="getSize()">Submit</button>
 
@@ -53,7 +53,7 @@
 	<div class="s_form s_hide" id="vis2">
 		<p> Please add file details </p>
 			File name:	<input  id="file_name" type="text">
-			File size(in KB):	<input  id="file_size" type="number">
+			File size(number of blocks):	<input  id="file_size" type="number">
 			<button class="s_done" onclick="addFile()">Add</button>
 			<br>
 	</div>
@@ -67,6 +67,7 @@
 	canv = document.getElementById("can");
 	var ctx = canv.getContext("2d");
 
+	var used;
 	var colors = new Array(200);
 	var file_sizes = new Array(200);
 	var file_names = new Array(200);
@@ -78,6 +79,7 @@
 	var a = 0, b = 0;
 	function getSize(){
 		memSize = document.getElementById("nof").value;
+		used = new Array(memSize);
 		if(memSize != ""){
 			vis2 = document.getElementById("vis2");
 			vis2.style.visibility = "visible";
