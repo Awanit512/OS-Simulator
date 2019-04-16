@@ -51,7 +51,7 @@ $(document).ready(function(){
   function DisplayList(){
     var table = document.getElementById("ept");
     console.log(stuff[stuff.length-1].no);
-    $('#ept').append("<tr><td>"+stuff[stuff.length-1].no+"</td><td>"+stuff[stuff.length-1].at+"</td><td>"+stuff[stuff.length-1].bt1+"</td><td>"+stuff[stuff.length-1].io+"</td><td>"+stuff[stuff.length-1].bt2+"</td><td>"+stuff[stuff.length-1].p+"</td></tr>");
+    $('#ept').append("<tr><td>"+stuff[stuff.length-1].no+"</td><td>"+stuff[stuff.length-1].at+"</td><td>"+stuff[stuff.length-1].bt1+"</td><td>"+stuff[stuff.length-1].p+"</td></tr>");
   }
   function AddtoList(){
     var arrivalTime=parseInt(document.getElementById("at1").value);
@@ -85,8 +85,8 @@ $(document).ready(function(){
     console.log(stuff);
     document.getElementById("at1").value="";
     document.getElementById("bt1").value="";
-    document.getElementById("io").value="";
-    document.getElementById("bt2").value="";
+    document.getElementById("io").value="0";
+    document.getElementById("bt2").value="0";
     document.getElementById("priority").value="";
     DisplayList();
   };
@@ -1281,8 +1281,6 @@ p{
       <th>PNO.</th>
       <th>Arrival Time </th>
       <th>Burst Time 1 </th>
-      <th>IO </th>
-      <th>Burst Time 2 </th>
       <th>Priority</th>
     </tr>
     <tbody id="ept">
@@ -1292,8 +1290,8 @@ p{
   </div>
   <input type='number' min="0" id='at1' placeholder="arrival time"></input>
   <input type='number' min="0"id='bt1' placeholder="burst time 1"></input>
-  <input type='number' min="0" id='io' placeholder="io time"></input>
-  <input type='number' min="0" id='bt2' placeholder="burst time 2"></input>
+  <input type='hidden' min="0" id='io' value="0" placeholder="io time"></input>
+  <input type='hidden' min="0" id='bt2' value="0" placeholder="burst time 2"></input>
   <input type='number' min="0" id='priority' placeholder="priority"></input>
   <button id="add" class="btn" onclick="AddtoList()">Add</button>
   <br><br>
