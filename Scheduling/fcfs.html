@@ -50,7 +50,7 @@ $(document).ready(function(){
   function DisplayList(){
     var table = document.getElementById("ept");
     console.log(stuff[stuff.length-1].no);
-    $('#ept').append("<tr><td>"+stuff[stuff.length-1].no+"</td><td>"+stuff[stuff.length-1].at+"</td><td>"+stuff[stuff.length-1].bt1+"</td><td>"+stuff[stuff.length-1].io+"</td><td>"+stuff[stuff.length-1].bt2+"</td></tr>");
+    $('#ept').append("<tr><td>"+stuff[stuff.length-1].no+"</td><td>"+stuff[stuff.length-1].at+"</td><td>"+stuff[stuff.length-1].bt1+"</td></tr>");
   }
   function AddtoList(){
     var arrivalTime=parseInt(document.getElementById("at1").value);
@@ -80,8 +80,8 @@ $(document).ready(function(){
     index=index+1;
     document.getElementById("at1").value="";
     document.getElementById("bt1").value="";
-    document.getElementById("io").value="";
-    document.getElementById("bt2").value="";
+    document.getElementById("io").value="0";
+    document.getElementById("bt2").value="0";
     console.log(stuff);
     DisplayList();
   };
@@ -261,7 +261,7 @@ $(document).ready(function(){
     if(i<stuff.length){
     var table = document.getElementById("ptable");
     console.log(stuff[i].wt);
-    $("#ptable").append("<tr><td>"+stuff[i].no+"</td><td>"+stuff[i].at+"</td><td>"+stuff[i].bt1+"</td><td>"+stuff[i].io+"</td><td>"+stuff[i].bt2+"</td><td>"+stuff[i].wt+"</td><td>"+stuff[i].tat+"</td></tr>");
+    $("#ptable").append("<tr><td>"+stuff[i].no+"</td><td>"+stuff[i].at+"</td><td>"+stuff[i].bt1+"</td><td>"+stuff[i].wt+"</td><td>"+stuff[i].tat+"</td></tr>");
     drawTable(i+1);
   }
   else
@@ -371,8 +371,6 @@ p{
       <th>PNO.</th>
       <th>Arrival Time </th>
       <th>Burst Time 1 </th>
-      <th>IO </th>
-      <th>Burst Time 2 </th>
     </tr>
     <tbody id="ept">
     </tbody>
@@ -383,8 +381,8 @@ p{
   <br>
   <input type='number' min="0" id='at1' placeholder="arrival time"></input>
   <input type='number' min="0" id='bt1' placeholder="burst time 1"></input>
-  <input type='number' min="0" id='io' placeholder="io time"></input>
-  <input type='number' min="0" id='bt2' placeholder="burst time 2"></input>
+  <input type='hidden' min="0" id='io' value="0" placeholder="io time"></input>
+  <input type='hidden' min="0" id='bt2' value="0" placeholder="burst time 2"></input>
   <button id="add" class="btn" onclick="AddtoList()">Add</button>
   <br><br>
   <button id="start" class="btn">Start</button>
@@ -401,13 +399,10 @@ p{
   <th>PNO.</th>
   <th>Arrival time</th>
   <th>Burst time1</th>
-  <th>I/O time</th>
-  <th>Burst time2</th>
   <th>Waiting time</th>
   <th>Turn Around Time</th>
   </tr>
   <tbody id="ptable">
-
   </tbody>
   </thead>
   </table>

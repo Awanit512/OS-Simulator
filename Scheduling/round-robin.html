@@ -51,7 +51,7 @@ $(document).ready(function(){
   function DisplayList(){
     var table = document.getElementById("ept");
     console.log(stuff[stuff.length-1].no);
-    $('#ept').append("<tr><td>"+stuff[stuff.length-1].no+"</td><td>"+stuff[stuff.length-1].at+"</td><td>"+stuff[stuff.length-1].bt1+"</td><td>"+stuff[stuff.length-1].io+"</td><td>"+stuff[stuff.length-1].bt2+"</td></tr>");
+    $('#ept').append("<tr><td>"+stuff[stuff.length-1].no+"</td><td>"+stuff[stuff.length-1].at+"</td><td>"+stuff[stuff.length-1].bt1+"</td></tr>");
   }
   function AddtoList(){
     var arrivalTime=parseInt(document.getElementById("at1").value);
@@ -384,9 +384,9 @@ p{
       <thead>
       <th>PNO.</th>
       <th>Arrival Time </th>
-      <th>Burst Time 1 </th>
-      <th>IO </th>
-      <th>Burst Time 2 </th>
+      <th>Burst Time</th>
+<!--       <th>IO </th> -->
+<!--       <th>Burst Time 2 </th> -->
     </tr>
     <tbody id="ept">
     </tbody>
@@ -394,7 +394,7 @@ p{
 </table>
   </div>
   <input type='number' min="0" id='at1' placeholder="arrival time"></input>
-  <input type='number' min="0" id='bt1' placeholder="burst time 1"></input>
+  <input type='number' min="0" id='bt1' placeholder="burst time"></input>
   <button id="add" class="btn" onclick="AddtoList()">Add</button>
   <br>
   <input type='number' min="0" id="tq" placeholder="Time quantum"></input>
@@ -411,8 +411,8 @@ p{
   <th>PNO.</th>
   <th>Arrival time</th>
   <th>Burst time1</th>
-  <th>I/O time</th>
-  <th>Burst time2</th>
+<!--   <th>I/O time</th> -->
+<!--   <th>Burst time2</th> -->
   <th>Waiting time</th>
   <th>Turn around time</th>
   </tr>
