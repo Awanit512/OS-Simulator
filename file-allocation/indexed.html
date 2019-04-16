@@ -154,7 +154,7 @@
 				count++;
 				showOutput();
 				remaining -= (size + 1);
-				console.log(allocations);
+				//console.log(allocations);
 			}
 			
 		}
@@ -167,21 +167,37 @@
 	function showOutput(){
 		var str = "";
 		var j;
+		ctx.fillStyle = "#f1f1f1";
+		ctx.fillRect(0, 0, canv.width, canv.height);
+		for(var j = 0; j < memSize; j++){
+			if(used[j] == true)
+			{	
+				ctx.fillStyle = "#000";
+				ctx.fillRect(j * canv.width / memSize, 0, (1) * canv.width / memSize, canv.height);
+			}
+			else{
+				ctx.fillStyle = "#fff";
+				ctx.fillRect(j * canv.width / memSize, 0, (1) * canv.width / memSize, canv.height);
+			}
+		}
 		document.getElementById("op1").innerHTML = "File______Index block______Size________Blocks";
 		for(var i = 0; i < count; i++){
 			str += "<br />" + file_names[i]  + "__________" + starts[i] + "__________" + file_sizes[i] + "_________";
 			//j = starts[count];
 			for(j = 0; j < memSize; j++){
 				//console.log(allocations[j], count);
-				if(parseInt(allocations[j]) == i + 1 && j != starts[i])
+				if(parseInt(allocations[j]) == i + 1)
 				{	
 					//console.log(j);
-					str += " " + j;
+					if( j != starts[i])
+						str += " " + j;
+					ctx.fillStyle = colors[i];
+					ctx.fillRect(j * canv.width / memSize, 0, (1) * canv.width / memSize, canv.height);
 				}
 			}
-			//ctx.fillStyle = colors[i];
-			//ctx.fillRect(starts[i] * canv.width / memSize, 0, ends[i] * canv.width / memSize, canv.height);
-			//console.log(used, count);
+			// ctx.fillStyle = colors[i];
+			// ctx.fillRect(starts[i] * canv.width / memSize, 0, ends[i] * canv.width / memSize, canv.height);
+			// console.log(used, count);
 		}
 		document.getElementById("op").innerHTML = str;
 		
