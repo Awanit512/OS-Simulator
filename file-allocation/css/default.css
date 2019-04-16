@@ -21,8 +21,8 @@ body, html { font-size: 100%; padding: 0; margin: 0; }
 
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
-	color: #fff;
-	background: #e74c3c;
+	color: #000;
+	padding: 10px;
 }
 
 a {
@@ -182,3 +182,37 @@ button:hover {
 	}
 
 }
+
+
+//Rahul Addition
+
+.file_alloc hover{
+
+}
+
+.file_alloc {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
