@@ -94,7 +94,8 @@
 				used[i] = false;
 				next[i] = -1;
 			}
-			console.log(allocations, remaining);
+			// console.log(next);
+			// console.log(allocations);
 		}
 		else
 			alert("Please enter valid size!");
@@ -165,16 +166,18 @@
 
 	function showOutput(){
 		var str = "";
-
+		var j;
 		document.getElementById("op1").innerHTML = "File______Start_____End_____Size";
 		for(var i = 0; i < count; i++){
 			str += "<br />" + file_names[i]  + "________" + starts[i] + "________" + ends[i] + "________" + file_sizes[i] + "_______";
-			var j = starts[count];
-			while(next[j] != -1){
-				//if(allocations[j] == count + 1)
-				console.log(j);
-				str += "-->" + j;
-				j = next[j]
+			//j = starts[count];
+			for(j = 0; j < memSize; j++){
+				//console.log(allocations[j], count);
+				if(parseInt(allocations[j]) == i + 1)
+				{	
+					//console.log(j);
+					str += "-->" + j;
+				}
 			}
 			//ctx.fillStyle = colors[i];
 			//ctx.fillRect(starts[i] * canv.width / memSize, 0, ends[i] * canv.width / memSize, canv.height);
