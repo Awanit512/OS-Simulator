@@ -130,7 +130,7 @@
 			}
 			else{
 				var prev = -1;
-				for(var i = 0; i < size; i++)
+				for(var i = 0; i < size + 1; i++)
 				{
 					for(var j = 0; j < memSize; j++){
 						if(!used[j]){
@@ -153,7 +153,7 @@
 				file_sizes[count] = size;
 				count++;
 				showOutput();
-				remaining -= size;
+				remaining -= (size + 1);
 				console.log(allocations);
 			}
 			
@@ -167,16 +167,16 @@
 	function showOutput(){
 		var str = "";
 		var j;
-		document.getElementById("op1").innerHTML = "File______Start_____End_____Size";
+		document.getElementById("op1").innerHTML = "File______Index block______Size________Blocks";
 		for(var i = 0; i < count; i++){
-			str += "<br />" + file_names[i]  + "________" + starts[i] + "________" + ends[i] + "________" + file_sizes[i] + "_______";
+			str += "<br />" + file_names[i]  + "__________" + starts[i] + "__________" + file_sizes[i] + "_________";
 			//j = starts[count];
 			for(j = 0; j < memSize; j++){
 				//console.log(allocations[j], count);
-				if(parseInt(allocations[j]) == i + 1)
+				if(parseInt(allocations[j]) == i + 1 && j != starts[i])
 				{	
 					//console.log(j);
-					str += "-->" + j;
+					str += " " + j;
 				}
 			}
 			//ctx.fillStyle = colors[i];
