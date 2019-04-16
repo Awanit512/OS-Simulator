@@ -35,7 +35,7 @@ var req = [];
 	card.appendChild(p);
 	var inp = document.createElement("input");
 	inp.setAttribute("id","res-"+(i+1));
-	inp.setAttribute("style","text-align:center;margin:auto;float:left;border: 2px solid blue; padding:10px;width: 40px;height: 20px;");
+	inp.setAttribute("style","text-align:center;margin:auto;float:left;border: 2px solid #609; padding:10px;width: 40px;height: 20px;");
 	card.appendChild(inp);
 	resources.appendChild(card);
 	}
@@ -62,7 +62,7 @@ var req = [];
 	var inp1 = document.createElement("input");
 	inp1.setAttribute("id","MPR"+(i+1));
 	inp1.setAttribute("placeholder","R-"+(i+1));
-	inp1.setAttribute("style","width:50px;text-align:center;margin:auto;float:left;border: 2px solid blue; padding:10px;width: 40px;height: 20px;");
+	inp1.setAttribute("style","width:50px;text-align:center;margin:auto;float:left;border: 2px solid #609; padding:10px;width: 40px;height: 20px;");
 	card.appendChild(inp1);
 	d1.appendChild(card);
 	}
@@ -79,7 +79,7 @@ var req = [];
 	var inp2 = document.createElement("input");
 	inp2.setAttribute("placeholder","R-"+(i+1));
 	inp2.setAttribute("id","APR"+(i+1));
-	inp2.setAttribute("style","width:50px;text-align:center;margin:auto;float:left;border: 2px solid blue; padding:10px;width: 40px;height: 20px;");
+	inp2.setAttribute("style","width:50px;text-align:center;margin:auto;float:left;border: 2px solid #609; padding:10px;width: 40px;height: 20px;");
 	card.appendChild(inp2);
 	d2.appendChild(card);
 	}
