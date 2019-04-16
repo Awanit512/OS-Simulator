@@ -35,7 +35,7 @@ var req = [];
 		card.appendChild(p);
 		var inp = document.createElement("input");
 		inp.setAttribute("id","res-"+(i+1));
-		inp.setAttribute("style","width:30px;text-align:center;margin:auto;float:left;border-radius: 18px;border: 2px solid #609;width: 50px;height: 20px;");
+		inp.setAttribute("style","width:100px;text-align:center;margin:auto;float:left;");
 		card.appendChild(inp);
 		resources.appendChild(card);
 	}
@@ -54,7 +54,7 @@ var req = [];
 	d1.setAttribute("style","margin-left:10px;float:left;");
 	var p1=document.createElement("card");
 	p1.setAttribute("style","margin-left:10px;float:left;");
-	p1.textContent = "Maximum matrix: ";
+	p1.textContent = "Max Need: ";
 	d1.appendChild(p1);
 	for(var i=0;i<num;i++){
 		var card =document.createElement("div");
@@ -62,7 +62,7 @@ var req = [];
 		var inp1 = document.createElement("input");
 		inp1.setAttribute("id","MPR"+(i+1));
 		inp1.setAttribute("placeholder","R-"+(i+1));
-		inp1.setAttribute("style","width:30px;text-align:center;margin:auto;float:left;border-radius: 18px;border: 2px solid #609;width: 50px;height: 20px;");
+		inp1.setAttribute("style","width:50px;text-align:center;margin:auto;float:left;");
 		card.appendChild(inp1);
 		d1.appendChild(card);
 	}
@@ -71,7 +71,7 @@ var req = [];
 	d1.setAttribute("style","width:100%;margin-left:10px;float:left;");
 	var p2=document.createElement("card");
 	p2.setAttribute("style","margin-left:20px;float:left;");
-	p2.textContent = "Allocated matrix:   ";
+	p2.textContent = "Allocated:   ";
 	d2.appendChild(p2);
 	for(var i=0;i<num;i++){
 		var card =document.createElement("div");
@@ -79,14 +79,13 @@ var req = [];
 		var inp2 = document.createElement("input");
 		inp2.setAttribute("placeholder","R-"+(i+1));
 		inp2.setAttribute("id","APR"+(i+1));
-		inp2.setAttribute("style","width:30px;text-align:center;margin:auto;float:left;border-radius: 18px;border: 2px solid #609;width: 50px;height: 20px;");
+		inp2.setAttribute("style","width:50px;text-align:center;margin:auto;float:left;");
 		card.appendChild(inp2);
 		d2.appendChild(card);
 	}
 	input.appendChild(d2);
 	var but = document.createElement("button");
-	but.textContent = "Add Process";
-	but.setAttribute("style","border-radius: 18px;background: #609;width: 150px;height: 50px; color:white");
+	but.textContent = "ADD";
 	but.setAttribute("onclick","addToList()");
 	input.appendChild(but);
 	console.log(num);
@@ -518,8 +517,3 @@ function displayalloc(){
 	}
 }
 
-
-	
-
-
-	
