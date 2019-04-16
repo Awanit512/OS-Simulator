@@ -17,7 +17,7 @@
 			   
 	</style>
   </head>
-  <body>
+  <body data-gr-c-s-loaded="true">
   <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
  <div class="navbar-header">
@@ -30,23 +30,31 @@
   </div>
 </nav>
 <br><br><br>
-<div class="page-header" >
-   <h1 style="float:center">    Banker's Algorithm</h1>      
+<div class="page-header">
+   <h3 align="center">    Banker's Algorithm</h3>      
 </div>
 
-    <div style = "width: 100%;;margin-left:10px;text-align:left;">
+    <div style="width: 100%;;margin-left:10px;text-align:left;">
       <div style="float:left; margin-right:20px;">Number of Resources:</div>
-      <input style = "width: 50px;float:left;margin-right:30px;" id = "totalres" onkeyup="addInitialRes()" type="text">
-	   	<button class="btn btn-primary btn-success" style ="float:right;margin-right:20px;" onclick="clear_data()"  >Clear Data</button>
+      <input style="width: 30px;float:left;margin-right:30px;border-radius: 25px;
+    border: 2px solid #609;
+    padding: 20px; 
+    width: 100px;
+    height: 15px; " id="totalres" onkeyup="addInitialRes()" type="text">
+	   	<button class="btn btn-primary btn-success" style="float:right;margin-right:20px; border-radius: 18px;
+    background: #609;
+    
+    width: 150px;
+    height: 50px;  " onclick="clear_data()">Clear Data</button>
     </div>
-	<br><br/>
-	<br><br/>
-	<br><br/>
-	<div id = "resources" style="margin-left:10px;"></div>
-	<br><br/>
-	<br><br/>
-	<div id = "table" style="margin-left:0px;">
-		<div style = "width:50%; float:left;">
+	<br><br>
+	<br><br>
+	<br><br>
+	<div id="resources" style="margin-left:10px;"><div style="width:auto;float:left;margin-right:50px;height:50px;"><div style="width:100px;float:left;">Resource 1</div><input id="res-1" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div><div style="width:auto;float:left;margin-right:50px;height:50px;"><div style="width:100px;float:left;">Resource 2</div><input id="res-2" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div></div>
+	<br><br>
+	<br><br>
+	<div id="table" style="margin-left:0px;">
+		<div style="width:50%; float:left;">
 	
 		<div id="heading"></div>
 		<br>
@@ -54,48 +62,49 @@
 			<thead id="inp-head"> 
 			</thead>
 			<tbody id="ptable">
-			</tbody >
+			</tbody>
 		</table>
 		</div>
-		<div style = "width:50%; float:left;">
+		<div style="width:50%; float:left;">
 			<div id="heading_alloc"></div>
 			<br>
 			<table id="tab_alloc" class="table bordered centered responsive-table " style="border-color: black; border-width: 1px; bgcolor: white; ">
 				<thead id="inp-head_alloc"> 
 				</thead>
 				<tbody id="ptable_alloc">
-				</tbody >
+				</tbody>
 			</table>
 		</div>
 	</div>
-	<br><br/>
-	<div id ="inputsection">
-	</div>
-	<br><br/>
-	<br><br/>
-	<div id="firs_alloc" style = "margin-left:10px">
+	<br><br>
+	<div id="inputsection"><div style="width:100%;margin-left:10px;float:left;"><card style="margin-left:10px;float:left;">Maximum Resources </card><div style="width:auto;float:left;margin-right:50px;height:50px;"><input id="MPR1" placeholder="R-1" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div><div style="width:auto;float:left;margin-right:50px;height:50px;"><input id="MPR2" placeholder="R-2" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div></div><div><card style="margin-left:20px;float:left;">Allocated Resources:   </card><div style="width:auto;float:left;margin-right:50px;height:50px;"><input placeholder="R-1" id="APR1" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div><div style="width:auto;float:left;margin-right:50px;height:50px;"><input placeholder="R-2" id="APR2" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div></div><button onclick="addToList()" style="border-radius: 18px;background: #609;width: 150px;height: 50px; color:white">Add Process</button></div>
+	<br><br>
+	<br><br>
+	<div id="firs_alloc" style="margin-left:10px">
 	
 	</div>
-	<div id = "run" style="text-align:center;">
-	            <button class="btn btn-primary btn-success" onclick="banker()" >Run</button>
+	<div id="run" style="text-align:center;">
+	            <button class="btn btn-primary btn-success" onclick="banker()">Run</button>
 	</div>
-	<br><br/>
-	<br><br/>
-	<div  id = "operations" >
+	<br><br>
+	<br><br>
+	<div id="operations">
 	</div>
-		<br><br/>
-		<div id = "output1" style = "text-align:center">
+		<br><br>
+		<div id="output1" style="text-align:center">
 	</div>
-	<br><br/>
-	<br><br/>
-	<div id = "output" style = "text-align:center">
+	<br><br>
+	<br><br>
+	<div id="output" style="text-align:center">
 	
 	</div>
-	<br><br/>
-	<br><br/>
-	<div id = "output2" style = "text-align:center">
+	<br><br>
+	<br><br>
+	<div id="output2" style="text-align:center">
 	
 	</div>
-	<br><br/>
-  </body>
+	<br><br>
+  
+
+</body>
 </html>
