@@ -216,3 +216,48 @@ button:hover {
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+		.s_hide{
+			display: none;
+		}
+		.s_show{
+			display: block;
+		}
+		.some{
+			padding-top: 20px;
+			color:black;
+		}
+	     
+	     
+		input{
+			 width: 10%;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    box-sizing: border-box;
+	    border: none;
+	    background-color: #3CBC8D;
+	    color: white;
+		}
+		.s_done,.s_cal{
+		background-color: black; /* Green */
+	    border: none;
+	    color: white;
+	    padding: 10px 20px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    margin: 8px 20px;
+	    -webkit-transition-duration: 0.4s; /* Safari */
+	    transition-duration: 0.4s;
+	    cursor: pointer;
+		}
+
+		.s_cal:hover{
+			 background-color: #3CBC8D;
+	    color: white;
+		}
+		.s_done:hover{
+			 background-color: #3CBC8D;
+	    color: white;
+		}
