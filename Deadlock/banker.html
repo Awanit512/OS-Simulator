@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> Banker </title>
+ <head>
+ <title> Banker </title>
 	<script type="text/javascript" src="banker.js"></script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,34 +11,37 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  
 	<style>
-        h1, h2, h4,h5{
-            text-align: center;
-            }
-			   
-	</style>
-  </head>
-  <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
+ h1, h2, h4,h5{
+ text-align: center;
+ }
+</style>
+ </head>
+ <body>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+ <div class="container-fluid">
  <div class="navbar-header">
-  <a class="navbar-brand" href="./os_sim.html">OS simulator</a>
-   </div>
-  <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
-     <li class="active"><a href="../wiki-sample/wiki.html">Wiki</a></li>
-   </ul>
-  </div>
+ <a class="navbar-brand" href="./os_sim.html">OS simulator</a>
+ </div>
+ <ul class="nav navbar-nav">
+ <li class="active"><a href="index.html">Go Back</a></li>
+ <li class="active"><a href="../wiki-sample/wiki.html">About Banker's Algorithm</a></li>
+ </ul>
+ </div>
 </nav>
 <br><br><br>
 <div class="page-header" >
-   <h1 style="float:center">    Banker's Algorithm</h1>      
+ <h1 style="float:center"> Banker's Algorithm</h1> 
 </div>
 
-    <div style = "width: 100%;;margin-left:10px;text-align:left;">
-      <div style="float:left; margin-right:20px;">Number of Resources:</div>
-      <input style = "width: 50px;float:left;margin-right:30px;" id = "totalres" onkeyup="addInitialRes()" type="text">
-	   	<button class="btn btn-primary btn-success" style ="float:right;margin-right:20px;" onclick="clear_data()"  >Clear Data</button>
-    </div>
+ <div style = "width: 100%;;margin-left:10px;text-align:left;">
+ <div style="float:left; margin-right:20px;">Number of Resources:</div>
+ <input style = "width: 50px;float:left;margin-right:30px;
+  border: 2px solid blue; padding:10px;
+  width: 40px;
+  height: 20px;" id = "totalres" onkeyup="addInitialRes()" type="text">
+	<button class="btn btn-primary btn-success" style ="float:right;margin-right:20px; background: blue;" onclick="clear_data()" >Clear Data</button>
+ </div>
+ 
 	<br><br/>
 	<br><br/>
 	<br><br/>
@@ -46,27 +49,27 @@
 	<br><br/>
 	<br><br/>
 	<div id = "table" style="margin-left:0px;">
-		<div style = "width:50%; float:left;">
+	<div style = "width:50%; float:left;">
 	
-		<div id="heading"></div>
-		<br>
-		<table id="tab" class="table bordered centered " style="border-color: black; border-width: 1px; bgcolor: white; ">
-			<thead id="inp-head"> 
-			</thead>
-			<tbody id="ptable">
-			</tbody >
-		</table>
-		</div>
-		<div style = "width:50%; float:left;">
-			<div id="heading_alloc"></div>
-			<br>
-			<table id="tab_alloc" class="table bordered centered responsive-table " style="border-color: black; border-width: 1px; bgcolor: white; ">
-				<thead id="inp-head_alloc"> 
-				</thead>
-				<tbody id="ptable_alloc">
-				</tbody >
-			</table>
-		</div>
+	<div id="heading"></div>
+	<br>
+	<table id="tab" class="table bordered centered " style="border-color: black; border-width: 1px; bgcolor: white; ">
+	<thead id="inp-head"> 
+	</thead>
+	<tbody id="ptable">
+	</tbody >
+	</table>
+	</div>
+	<div style = "width:50%; float:left;">
+	<div id="heading_alloc"></div>
+	<br>
+	<table id="tab_alloc" class="table bordered centered responsive-table " style="border-color: black; border-width: 1px; bgcolor: white; ">
+	<thead id="inp-head_alloc"> 
+	</thead>
+	<tbody id="ptable_alloc">
+	</tbody >
+	</table>
+	</div>
 	</div>
 	<br><br/>
 	<div id ="inputsection">
@@ -77,14 +80,14 @@
 	
 	</div>
 	<div id = "run" style="text-align:center;">
-	            <button class="btn btn-primary btn-success" onclick="banker()" >Run</button>
+	<button class="btn btn-primary btn-success" style = "background : blue;" onclick="banker()" >Run</button>
 	</div>
 	<br><br/>
 	<br><br/>
-	<div  id = "operations" >
+	<div id = "operations" >
 	</div>
-		<br><br/>
-		<div id = "output1" style = "text-align:center">
+	<br><br/>
+	<div id = "output1" style = "text-align:center">
 	</div>
 	<br><br/>
 	<br><br/>
@@ -97,5 +100,5 @@
 	
 	</div>
 	<br><br/>
-  </body>
+ </body>
 </html>
