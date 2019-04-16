@@ -389,29 +389,29 @@ color: white;
 </nav>
 <br><br><br>
 <div class="page-header" >
- <h1 align="center" style="font-variant:small-caps;">Disk Scheduling </h1> 
-<h3 align="center" style="font-variant:small-caps;background-color: black;color: white">Different Types of Disk Schedulings can be examined and compared here ....</h3>
+ <h1 align="center" style="font-variant:small-caps;">Disk Scheduling</h1>
+<h3 align="center" style="font-variant:small-caps;background-color: black;color: white">Comparision of Different Algorithms<s/h3>
 
 
 </div>
 
-		<div class="options">
-			<h2  style="font-variant:small-caps;margin-left:40%"">Choose the algorithms</h2>
-			<button class="button button1" onclick="optchecked(0)" style="margin-top:3%;margin-left: 5%">F C F S</button>
-			<button class="button button2" onclick="optchecked(1)" style="margin-top:9%;position: absolute;">S S T F</button>
-			<button class="button button3" onclick="optchecked(2)" style="margin-left:18%;">S C A N</button>
-			<button class="button button4" onclick="optchecked(3)" style="margin-top:9%;position: absolute;">C S C A N</button>
-			<button class="button button5" onclick="optchecked(4)" style="margin-left:18%;">L O O K</button>
-			<button class="button button6" onclick="optchecked(5)" style="margin-top:9%;position: absolute;">C L O O K</button>
-		</div>
+		<!--<div class="options">-->
+			<!--<h2  style="font-variant:small-caps;margin-left:40%"">Choose the algorithms</h2>-->
+			<!--<button class="button button1" onclick="optchecked(0)" style="margin-top:3%;margin-left: 5%">F C F S</button>-->
+			<!--<button class="button button2" onclick="optchecked(1)" style="margin-top:9%;position: absolute;">S S T F</button>-->
+			<!--<button class="button button3" onclick="optchecked(2)" style="margin-left:18%;">S C A N</button>-->
+			<!--<button class="button button4" onclick="optchecked(3)" style="margin-top:9%;position: absolute;">C S C A N</button>-->
+			<!--<button class="button button5" onclick="optchecked(4)" style="margin-left:18%;">L O O K</button>-->
+			<!--<button class="button button6" onclick="optchecked(5)" style="margin-top:9%;position: absolute;">C L O O K</button>-->
+		<!--</div>-->
 
 		<div style="margin-top:10%;height:300px;color:black">
 		<div style="margin-top:5%;position:absolute;margin-left:10%;">
-			<h4 style="font-weight: bold"> Enter the following details</h4>
+			<h4 style="font-weight: bold">Enter the following details</h4>
 			<div style="margin-top:8% ;position: absolute;width: 300px;"><label>HEAD</label><input class="tdm-head" type="number" min="0"></div>
 			<br>
 			<div style="margin-left: 200%;margin-top: -20% ;position: absolute;width:300px;">
-				<h4> Enter the first and last cylinder number</h4> 
+				<h4>Enter the first and last cylinder number</h4>
 			<label>FIRST </label><input class="tdm-head" type="number" min="0"><br>
 			</div >
 			<div style="margin-left: 400%;margin-top: -0% ;position: absolute;width:300px;">
@@ -642,49 +642,24 @@ function calculate()
 	
 	var fcfsv=0,sstfv=0,scanv=0,cscanv=0,lookv=0,clookv=0;
 
-	if(fcfs % 2 == 1)
-	{
-		fcfsv = calculate_fcfs();
-		if(fcfsv == -10)
-			return;
-	}
 
-	if(sstf % 2 == 1)
-	{
-		sstfv = calculate_sstf();
-		if(sstfv == -10)
-			return;
-	}
+    fcfsv = calculate_fcfs();
 
-	if(scan % 2 == 1){
-			scanv = calculate_scan();
-			if(scanv == -10)
-				return;
-		}
-		
-		if(cscan % 2 == 1){
-			cscanv = calculate_cscan();
-			if(cscanv == -10)
-				return;
-		}
-		
-		if(look % 2 == 1){
-			lookv = calculate_look();
-			if(lookv == -10)
-				return;
-		}
-		
-		if(clook % 2 == 1){
-			clookv = calculate_clook();
-			if(clookv == -10)
-				return;
-		}
-		var f = document.getElementById("s_graph");
-		var att = document.createAttribute("class");
-		att.value = "s_show";
-		f.setAttributeNode(att);
 
-		show_graph(fcfsv,sstfv,scanv,cscanv,lookv,clookv);
+	sstfv = calculate_sstf();
+
+    scanv = calculate_scan();
+
+	cscanv = calculate_cscan();
+
+	lookv = calculate_look();
+	clookv = calculate_clook();
+
+    var f = document.getElementById("s_graph");
+    var att = document.createAttribute("class");
+    att.value = "s_show";
+    f.setAttributeNode(att);
+    show_graph(fcfsv,sstfv,scanv,cscanv,lookv,clookv);
 }
 
 function show_graph_section(){
@@ -899,7 +874,7 @@ function calculate_sstf()
 		{
 			y_i++;
 			p_i = parseInt(in_arr[j]);
-			scan_values.push(p_i);
+            scan_values.push(p_i);
 		}
 		
 		y_i++;
