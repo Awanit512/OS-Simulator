@@ -67,7 +67,7 @@
 	canv = document.getElementById("can");
 	var ctx = canv.getContext("2d");
 
-	var used;
+	var used, next, remaining, allocations;
 	var colors = new Array(200);
 	var file_sizes = new Array(200);
 	var file_names = new Array(200);
@@ -79,11 +79,22 @@
 	var a = 0, b = 0;
 	function getSize(){
 		memSize = document.getElementById("nof").value;
-		used = new Array(memSize);
+
 		if(memSize != ""){
 			vis2 = document.getElementById("vis2");
 			vis2.style.visibility = "visible";
 			vis2.classList.remove("s_hide");
+
+			used = new Array(parseInt(memSize));
+			next = new Array(parseInt(memSize));
+			remaining = parseInt(memSize);
+			allocations = new Array(parseInt(memSize));
+			for(var i = 0; i < parseInt(memSize); i++){
+				allocations[i] = -1;
+				used[i] = false;
+				next[i] = -1;
+			}
+			console.log(allocations, remaining);
 		}
 		else
 			alert("Please enter valid size!");
@@ -91,6 +102,14 @@
 	
 	function addFile(){
 		if(count == 0){
+			for(var i = 0; i < memSize; i++)
+			{
+				if(Math.random() > 0.5){
+					remaining--;
+					used[i] = true;
+				}
+				next[i] = -1;
+			}
 			for(var i = 0; i < 200; i++)
 			{
 				colors[i] = color();
@@ -99,27 +118,42 @@
 			 	starts[i] = 0;
 			 	ends[i] = 0;
 			}
-		 	start = 0;
-		 	end = 0;
-		 
 		}
 		var name = document.getElementById("file_name").value;
 		var size = document.getElementById("file_size").value;
 		size = parseInt(size);
-		 if(name != "" && size != "" ){
-			if(point + size > memSize - 1){
+		var cnt = 0;
+		if(name != "" && size != "" ){
+			if(size > remaining){
 				alert("Cannot allocate!!");
 			}
 			else{
-				
-				//console.log(point, count, size);
-				starts[count] = point + 1;
-				point = ends[count] = point + size;
-				
+				var prev = -1;
+				for(var i = 0; i < size; i++)
+				{
+					for(var j = 0; j < memSize; j++){
+						if(!used[j]){
+							if(prev != -1){
+								next[prev] = j;
+							}
+							if(i == 0)
+								starts[count] = j;
+							prev = j;
+							allocations[j] = count + 1;
+							used[j] = true;
+							break;
+						}
+
+					}
+				}
+				next[prev] = -1;
+				ends[count] = prev;			
 				file_names[count] = name;
 				file_sizes[count] = size;
 				count++;
 				showOutput();
+				remaining -= size;
+				console.log(allocations);
 			}
 			
 		}
@@ -134,10 +168,17 @@
 
 		document.getElementById("op1").innerHTML = "File______Start_____End_____Size";
 		for(var i = 0; i < count; i++){
-			str += file_names[i]  + "________" + starts[i] + "________" + ends[i] + "________" + file_sizes[i] + "<br />";
-			ctx.fillStyle = colors[i];
-			ctx.fillRect(starts[i] * canv.width / memSize, 0, ends[i] * canv.width / memSize, canv.height);
-			console.log(starts[i], 0, ends[i], canv.height);
+			str += "<br />" + file_names[i]  + "________" + starts[i] + "________" + ends[i] + "________" + file_sizes[i] + "_______";
+			var j = starts[count];
+			while(next[j] != -1){
+				//if(allocations[j] == count + 1)
+				console.log(j);
+				str += "-->" + j;
+				j = next[j]
+			}
+			//ctx.fillStyle = colors[i];
+			//ctx.fillRect(starts[i] * canv.width / memSize, 0, ends[i] * canv.width / memSize, canv.height);
+			//console.log(used, count);
 		}
 		document.getElementById("op").innerHTML = str;
 		
