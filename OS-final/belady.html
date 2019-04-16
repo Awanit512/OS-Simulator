@@ -22,7 +22,7 @@
 	  </nav>
 	  <br><br><br>
 	  <div class="page-header" >
-		 <h1 style="text-align:center;color:limegreen">BELADY'S ANAMOLY</h1> 
+		 <h1 style="text-align:center;color:limegreen">BELADY'S ANOMALY</h1> 
 		    
 	  </div>
 	  <body>
@@ -58,6 +58,7 @@ function belady()
 {
  f = document.getElementById("frames").value;
  rs=document.getElementById("rs").value;
+ rs=rs.split(' ');
 console.log(f);
 console.log(rs);
 var prev;
@@ -260,7 +261,7 @@ for(i=0;i<row-1;i++)
 				   
 					
 					if(("PH".localeCompare(pages1[i][j])==0)){	
-						line.append('<td style="color:green">'+'PH'+'</td>');
+						// line.append('<td style="color:green">'+'PH'+'</td>');
 					}
 					else{
 						line.append('<td style="color:red">'+'PF'+'</td>');

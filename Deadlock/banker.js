@@ -13,17 +13,17 @@ var safe =[];
 var ul1;
 var req = [];
 
-function addInitialRes(){
-	
-	var totalres = document.getElementById("totalres").value;
+ function addInitialRes(){
+
+ 	var totalres = document.getElementById("totalres").value;
 	num = parseInt(totalres);
 	if(num<=0)
 	{
 		window.alert("Please enter valid input");
 		return;
 	}
-		
-	R=num;
+
+ 	R=num;
 	var resources = document.getElementById("resources");
 	resources.textContent="";
 	for(var i=0;i<num;i++){
@@ -39,11 +39,11 @@ function addInitialRes(){
 		card.appendChild(inp);
 		resources.appendChild(card);
 	}
-	
-	if(isNaN(num))
+
+ 	if(isNaN(num))
 	{
-		   
-			var input=document.getElementById("inputsection");
+
+ 			var input=document.getElementById("inputsection");
 			input.innerHTML="";
 	}
 	else
@@ -93,7 +93,7 @@ function addInitialRes(){
 }
 
 
-//function to add processes
+ //function to add processes
 function addToList() {
 	var temp = [];
 	for(var i=0;i<num;i++)
@@ -107,8 +107,8 @@ function addToList() {
         window.alert("Please enter numeric value of R");
         return;
     }
-	
-    temp.push( parseInt(inp));
+
+     temp.push( parseInt(inp));
 	}
 	max.push(temp);
 	var t=0;
@@ -120,15 +120,15 @@ function addToList() {
 			window.alert("Please enter valid inputs of resourse " +(i+1));
 			return;
 		}
-  
-	
-	
-	temp1.push(parseInt(inp1));
+
+
+
+ 	temp1.push(parseInt(inp1));
 	}
 	alloc.push(temp1);
-    
-    
-	for(var i = 0;i<num;i++)
+
+
+ 	for(var i = 0;i<num;i++)
 	{
     document.getElementById("MPR"+(i+1)).value = "";
     document.getElementById("APR"+(i+1)).value = "";
@@ -136,21 +136,21 @@ function addToList() {
 	index = index + 1;	
 	displayneed();
 	displayalloc();
-	
-}
+
+ }
 
 
-function is_available(x){
+ function is_available(x){
 	var flag = true;
 	for(var i=0;i<num;i++){
 		if(need[x][i]>available[i])
 				flag = false;
 	}
 	return flag;
-	
-}
 
-function safe_sequence(){
+ }
+
+ function safe_sequence(){
 	for(var i=0;i<index;i++){
 		if(marked[i] == false ) {		
 			if(is_available(i)){
@@ -206,8 +206,8 @@ function safe_sequence(){
 			d.appendChild(p1);
 		}
 		output.appendChild(d);
-		
-	}
+
+ 	}
 	if(count==0)
 	{
 		var output = document.getElementById("output");
@@ -252,8 +252,8 @@ function add()
 	var br = document.createElement("br");
 			output1.appendChild(br);
 			output1.appendChild(br);
-	
-	var c = document.createElement("h4");
+
+ 	var c = document.createElement("h4");
 	  c.textContent="OUTPUT :";
 	  c.setAttribute("style","float:left;margin-left:20px;width:100%;");
 	  output1.appendChild(c);
@@ -324,7 +324,7 @@ function add()
 	}
 }
 
-function cleardata()
+ function cleardata()
 {
 	marked =[];
 	need =[];
@@ -371,8 +371,8 @@ function clear_data()
 	t.innerHTML="";
 	var t1=document.getElementById("totalres");
 	t1.value="";
-	
-}
+
+ }
 function banker(){
 	cleardata();
 	for(var i =0;i<index;i++){
@@ -408,8 +408,8 @@ function banker(){
 	pr.textContent="Enter Process whose requesting: ";
 	pr.setAttribute("style","width:250px;float:left;margin-left:20px;")
 	card1.appendChild(pr);
-	
-	var p3 = document.createElement("input");
+
+ 	var p3 = document.createElement("input");
 	p3.setAttribute("style","width:100px;text-align:center;margin:auto;float:left;");
 	p3.setAttribute("id","PR");
 	card1.appendChild(p3);	
@@ -437,7 +437,7 @@ function banker(){
 	operation.appendChild(but);
 }
 
-// Function to display Max Need Table
+ // Function to display Max Need Table
 function displayneed(){
 	var heading = document.getElementById("heading");
 	heading.innerHTML="";
@@ -459,8 +459,8 @@ function displayneed(){
 		tr.appendChild(tdi);
 	}
 	thead.appendChild(tr);
-	
-	var table=document.getElementById("ptable");
+
+ 	var table=document.getElementById("ptable");
 	table.innerHTML="";
 	for(j=0;j<index;j++)
 	{
@@ -475,8 +475,8 @@ function displayneed(){
 		}
 	table.appendChild(trj);
 	}
-	
-}
+
+ }
 // Function to print Allocated Table
 function displayalloc(){
 	var heading_alloc = document.getElementById("heading_alloc");
@@ -499,8 +499,8 @@ function displayalloc(){
 		tr.appendChild(tdi);
 	}
 	thead1.appendChild(tr);
-	
-	var table1=document.getElementById("ptable_alloc");
+
+ 	var table1=document.getElementById("ptable_alloc");
 	table1.innerHTML="";
 	for(j=0;j<index;j++)
 	{
@@ -516,5 +516,6 @@ function displayalloc(){
 	table1.appendChild(trj);
 	}
 }
+
 
 	
