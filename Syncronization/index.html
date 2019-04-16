@@ -12,18 +12,19 @@
 
 			body{
 				font-family: "courier new", Times, serif;	
-				background-color: #e0e0e0;
+				background-color: #E6E6FA;
 			}
 
 			.button1 {
-			  border-radius: 4px;
-			  background-color: #ff652f;
-			  border: none;
+			  border-radius: 70px;
+			  background-color: #8B008B;
+			  border:solid 4px black;
 			  color: #FFFFFF;
 			  text-align: center;
-			  font-size: 28px;
-			  padding: 20px;
-			  width: 200px;
+			  font-size: 25px;
+			  padding: 20px
+
+			  width: 20px;
 			  transition: all 0.5s;
 			  cursor: pointer;
 			  margin: 5px;
@@ -51,7 +52,7 @@
 			}
 
 			.button1:hover{
-				background: linear-gradient(to right, #ff652f 16%, #ffe400 100%);
+				background: linear-gradient(to right, #EE82EE 16%, #E6E6FA 100%);
 			}
 			.button1:hover span:after {
 			  opacity: 1;
@@ -65,7 +66,8 @@
     font-size: 28px;
     color: #FFFFFF;
     padding: 20px;
-    width: 200px;
+    width: 300px;
+    height:150px;
     text-align: center;
     -webkit-transition-duration: 0.2s; /* Safari */
     transition-duration: 0.4s;
@@ -134,14 +136,14 @@
 	
 	position:absolute;
 	margin-left:28%;
-	margin-top:35%;
+	margin-top:25%;
 }
 
 .but5{
 	
 	position:absolute;
 	margin-left:58%;
-	margin-top:35%;
+	margin-top:25%;
 }
 		</style>		
 
@@ -155,17 +157,16 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="../os_sim.html">Home</a></li>
-      <li class="active"><a href="#">Wiki</a></li>
+      <li class="active"><a href="wiki.html">Wiki</a></li>
     </ul>
   </div>
 </nav>
-		<h1 style="margin-left:42%;margin-top: 5%; color:#f004ff"> Syncronisation </h1>
+		<h1 style="margin-top: 5%; background-color:#DDA0DD;color:#4B0082"> <marquee><b>Syncronisation</b></marquee> </h1>
 
 		<button class="button1 button2 but1" onclick="change(0)"><span>Producer-consumer </span></button>
-		<button class="button1 button2 but2" onclick="change(1)"><span>Dining Philosopher</span></button>
-		<button class="button1 button2 but3" onclick="change(2)"><span>Barrier Semaphore </span></button>
+		<button class="button1 button2 but2" onclick="change(1)"><span>Dining-Philosopher</span></button>
 		<button class="button1 button2 but4" onclick="change(3)"><span>Reader-Writer </span></button>
-		<button class="button1 button2 but5" onclick="change(4)"><span>Sleeping Barber</span></button>
+		<button class="button1 button2 but5" onclick="change(2)"><span>Barrier Semaphore</span></button>
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	</body>
