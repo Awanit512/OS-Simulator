@@ -21,8 +21,8 @@ body, html { font-size: 100%; padding: 0; margin: 0; }
 
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
-	color: #fff;
-	background: #e74c3c;
+	color: #000;
+	padding: 10px;
 }
 
 a {
@@ -44,8 +44,8 @@ a:active {
 
 .container > header {
 	text-align: center;
-	background: #d94839;
-	padding: 3em;
+	padding-top: 3em;
+	padding-bottom: 1em
 }
 
 .container > header h1 {
@@ -182,3 +182,82 @@ button:hover {
 	}
 
 }
+
+
+//Rahul Addition
+
+.file_alloc hover{
+
+}
+
+.file_alloc {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+		.s_hide{
+			display: none;
+		}
+		.s_show{
+			display: block;
+		}
+		.some{
+			padding-top: 20px;
+			color:black;
+		}
+	     
+	     
+		input{
+			 width: 10%;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    box-sizing: border-box;
+	    border: none;
+	    background-color: #0051f5;
+	    color: white;
+		}
+		.s_done,.s_cal{
+		background-color: black; /* Green */
+	    border: none;
+	    color: white;
+	    padding: 10px 20px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    margin: 8px 20px;
+	    -webkit-transition-duration: 0.4s; /* Safari */
+	    transition-duration: 0.4s;
+	    cursor: pointer;
+		}
+
+		.s_cal:hover{
+			background-color: #3CBC8D;
+	    	color: white;
+		}
+		.s_done:hover{
+			background-color: #0051f5;
+	    	color: white;
+		}
