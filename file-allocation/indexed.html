@@ -34,8 +34,7 @@
       <a class="navbar-brand" href="../index.html">OS simulator</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li class="active"><a href="#">Wiki</a></li>
+      <li class="active"><a href="../index.html">Home</a></li>
       <li class="active"><a href="index_page.html">File Allocation</a></li>
     </ul>
   </div>
@@ -125,12 +124,12 @@
 		size = parseInt(size);
 		var cnt = 0;
 		if(name != "" && size != "" ){
-			if(size > remaining){
+			if(size > remaining - 1){
 				alert("Cannot allocate!!");
 			}
 			else{
 				var prev = -1;
-				for(var i = 0; i < size; i++)
+				for(var i = 0; i < size + 1; i++)
 				{
 					for(var j = 0; j < memSize; j++){
 						if(!used[j]){
@@ -153,8 +152,8 @@
 				file_sizes[count] = size;
 				count++;
 				showOutput();
-				remaining -= size;
-				console.log(allocations);
+				remaining -= (size + 1);
+				//console.log(allocations);
 			}
 			
 		}
@@ -167,21 +166,49 @@
 	function showOutput(){
 		var str = "";
 		var j;
-		document.getElementById("op1").innerHTML = "File______Start_____End_____Size";
+		ctx.fillStyle = "#f1f1f1";
+		ctx.fillRect(0, 0, canv.width, canv.height);
+		for(var j = 0; j < memSize; j++){
+			if(used[j] == true)
+			{	
+				ctx.fillStyle = "#000";
+				ctx.fillRect(j * canv.width / memSize, 0, (1) * canv.width / memSize, canv.height);
+			}
+			else{
+				ctx.fillStyle = "#fff";
+				ctx.fillRect(j * canv.width / memSize, 0, (1) * canv.width / memSize, canv.height);
+			}
+		}
+		document.getElementById("op1").innerHTML = "File______Index block______Size________Blocks";
 		for(var i = 0; i < count; i++){
-			str += "<br />" + file_names[i]  + "________" + starts[i] + "________" + ends[i] + "________" + file_sizes[i] + "_______";
+			str += "<br />" + file_names[i]  + "__________" + starts[i] + "__________" + file_sizes[i] + "_________";
 			//j = starts[count];
 			for(j = 0; j < memSize; j++){
 				//console.log(allocations[j], count);
 				if(parseInt(allocations[j]) == i + 1)
 				{	
 					//console.log(j);
-					str += "-->" + j;
+					if( j != starts[i]){
+						str += " " + j;
+						ctx.fillStyle = colors[i];
+						ctx.fillRect(j * canv.width / memSize, 0, (1) * canv.width / memSize, canv.height);
+					}
+					else
+					{
+						ctx.fillStyle = "#f1f1f1";
+						ctx.fillRect(j * canv.width / memSize, canv.height * 3 / 4, (1) * canv.width / memSize, canv.height / 4);
+						ctx.fillStyle = colors[i];
+						ctx.fillRect(j * canv.width / memSize, 0, (1) * canv.width / memSize, canv.height * 3 / 4);
+						ctx.font = "10px Georgia";
+						ctx.fillStyle = "#000";
+						ctx.fillText("Ind", j * canv.width / memSize,  canv.height * 3 / 4);
+					}
+					
 				}
 			}
-			//ctx.fillStyle = colors[i];
-			//ctx.fillRect(starts[i] * canv.width / memSize, 0, ends[i] * canv.width / memSize, canv.height);
-			//console.log(used, count);
+			// ctx.fillStyle = colors[i];
+			// ctx.fillRect(starts[i] * canv.width / memSize, 0, ends[i] * canv.width / memSize, canv.height);
+			// console.log(used, count);
 		}
 		document.getElementById("op").innerHTML = str;
 		

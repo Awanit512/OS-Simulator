@@ -12,7 +12,7 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
-<!--Header of soham--> 
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
  <div class="navbar-header">
@@ -28,8 +28,8 @@
 <div class="page-header" >
    <h1 style="text-align:center;color:limegreen">Page Replacement Algorithm</h1>      
 </div>
-<body>
-<h1 style="text-align:center;color:limegreen">Second Chance</h1>      
+<body  style="background-color:cornsilk">
+<h1 style="text-align:center;color:limegreen">Second Chance (Clock) Algorithm</h1>      
 <br>
 <form>
     <div class"container">
@@ -63,6 +63,12 @@ function fifo()
  f = document.getElementById("frames").value;
  rs=document.getElementById("rs").value;
  rs=rs.split(' ');
+ if(f<=0){
+	 window.alert("Invalid number of frames");
+ }
+ if(!rs[0]){
+	 window.alert("Invalid request sequence");
+ }
 console.log(f);
 console.log(rs);
 var prev;
@@ -160,7 +166,7 @@ $tbody = $("<tbody></tbody>");
 	for ( i=0; i<row;i++)
 	  { 
         var line =$("<tr></tr>");
-        // line.css({'background-color': getRandomColor()});  
+        // line.css({'background-color': rgba(255, 99, 71, 0.5)});  
 	  	for(j=0; j<col;j++){
        
         if(i==row-1) {

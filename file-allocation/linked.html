@@ -34,8 +34,7 @@
       <a class="navbar-brand" href="../index.html">OS simulator</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li class="active"><a href="#">Wiki</a></li>
+      <li class="active"><a href="../index.html">Home</a></li>
       <li class="active"><a href="index_page.html">File Allocation</a></li>
     </ul>
   </div>
@@ -105,7 +104,7 @@
 		if(count == 0){
 			for(var i = 0; i < memSize; i++)
 			{
-				if(Math.random() > 0.5){
+				if(Math.random() > 0.7){
 					remaining--;
 					used[i] = true;
 				}
@@ -167,6 +166,20 @@
 	function showOutput(){
 		var str = "";
 		var j;
+
+		ctx.fillStyle = "#f1f1f1";
+		ctx.fillRect(0, 0, canv.width, canv.height);
+		for(var j = 0; j < memSize; j++){
+			if(used[j] == true)
+			{	
+				ctx.fillStyle = "#000";
+				ctx.fillRect(j * canv.width / memSize, 0, (1) * canv.width / memSize, canv.height);
+			}
+			else{
+				ctx.fillStyle = "#fff";
+				ctx.fillRect(j * canv.width / memSize, 0, (1) * canv.width / memSize, canv.height);
+			}
+		}
 		document.getElementById("op1").innerHTML = "File______Start_____End_____Size";
 		for(var i = 0; i < count; i++){
 			str += "<br />" + file_names[i]  + "________" + starts[i] + "________" + ends[i] + "________" + file_sizes[i] + "_______";
@@ -177,6 +190,8 @@
 				{	
 					//console.log(j);
 					str += "-->" + j;
+					ctx.fillStyle = colors[i];
+					ctx.fillRect(j * canv.width / memSize, 0, (1) * canv.width / memSize, canv.height);
 				}
 			}
 			//ctx.fillStyle = colors[i];

@@ -34,7 +34,6 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li class="active"><a href="#">Wiki</a></li>
     </ul>
   </div>
 </nav>
@@ -97,17 +96,18 @@
 			<div class="main clearfix">
 				
 				<div>
-					  	<p><em>There are 3 types of file allocations discussed in this section.</em></p>
+					  	<p><h4>There are 3 types of file allocations discussed in this section.</h4></p>
 				<div>
-					<p> In sequential allocation, a file is allocated in contagious blocks  ......   <button class="md-trigger md-setperspective" data-modal="modal-18" align="center">Explore more</button></p>
+					<p><strong>1. SEQUENTIAL:</strong><br> In this scheme, each file occupies a contiguous set of blocks on the disk. For example, if a file requires n blocks and is given a block b as the starting location, then the blocks assigned to the file will be: b, b+1, b+2,……b+n-1. This means that given the starting block address and the length of the file (in terms of blocks required), we can determine the blocks occupied by the file</p>
 
-					  <a href="sequential.html" class="w3-button w3-black">SIMULATE sequential</a>
-					  
-					  	<p> In indexed allocation, Each file has its own index block which stores the addresses of disk space occupied by the file .....  <button class="md-trigger md-setperspective" data-modal="modal-19" align="center">Explore more</button></p>
-                       <a href="indexed.html" class="w3-button w3-black">SIMULATE Indexed</a>
+                    
+					  <center><a href="sequential.html" class="s_done">SIMULATE Sequential</a></center>
+					  	<p><strong>2. INDEXED:</strong><br>In this scheme, a special block known as the Index block contains the pointers to all the blocks occupied by a file. Each file has its own index block. The ith entry in the index block contains the disk address of the ith file block.</p> 
 
-                       	<p> In linked allocation, each file is a linked list of disk blocks .....  <button class="md-trigger md-setperspective" data-modal="modal-20" align="center">Explore more</button></p>
-					   <a href="linked.html" class="w3-button w3-black">SIMULATE Linked</a><br><br>
+                       <center><a href="indexed.html" class="s_done">SIMULATE Indexed</a></center>
+                   		<p><strong>3. LINKED:</strong><br>In this scheme, each file is a linked list of disk blocks which need not be contiguous. The disk blocks can be scattered anywhere on the disk. The directory entry contains a pointer to the starting and the ending file block. Each block contains a pointer to the next block occupied by the file.</p>
+
+					   <center><a href="linked.html" class="s_done">SIMULATE Linked</a><br><br></center>
 
 
 				</div>

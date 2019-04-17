@@ -77,8 +77,6 @@
     display: block;
     position: absolute;
     padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px!important;
     margin-top: -120%;
     opacity: 0;
     transition: all 0.9s
@@ -109,20 +107,18 @@
 .but1{
 	
 	position:absolute;
-	margin-left:8%;
 	margin-top:2px;
 }
 
 .but2{
 	
 	position:absolute;
-	margin-left:8%;
 	margin-top:7%;
 }
 
 .but3{
 	position:absolute;
-	margin-left:8%;
+	
 	margin-top:14%;
 }
 
@@ -130,33 +126,32 @@
 .but4{
 	
 	position:absolute;
-	margin-left:8%;
 	margin-top:21%;
 }
 
 .but5{
 	
 	position:absolute;
-	margin-left:8%;
+	
 	margin-top:28%;
 }
 
 .but6{
 	position: absolute;
-	margin-left: 60%;
+	
 	margin-top: 5%;
 }
 
 .but7{
 	
 	position:absolute;
-	margin-left:60%;
+	
 	margin-top:14%;
 }
 
 .but8{
 	position:absolute;
-	margin-left:60%;
+	
 	margin-top:23%;
 }
 
@@ -164,8 +159,11 @@
 .but9{
 	
 	position:absolute;
-	margin-left:8%;
+	
 	margin-top:35%;
+}
+.c{
+	margin-left: 42%;
 }
 		</style>		
 
@@ -177,33 +175,32 @@
 					 </div>
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="../os_sim.html">Home</a></li>
-					   <li class="active"><a href="#">Wiki</a></li>
 					 </ul>
 					</div>
 				  </nav>
 				  <br><br><br>
 				  <div class="page-header" >
- <h1 style="margin-left:2%;color:black">PAGE REPLACEMENT
-	 <span style="text-align:center;color:black;position:absolute;margin-left:33%">PAGING</span></h1> 
+ <h1 style="text-align: center;color:black">PAGE REPLACEMENT
+	 <!-- <span style="text-align:center;color:black;position:absolute;margin-left:33%">PAGING</span></h1>  -->
 					 
 				  </div>
 				  <body>
 						    
 				  <br>
 		
-
+<div class="c">
 		<button class="button1 button2 but1" onclick="change(0)"><span>FIFO </span></button>
 		<button class="button1 button2 but2" onclick="change(1)"><span>LRU </span></button>
 		<button class="button1 button2 but3" onclick="change(2)"><span>ALL </span></button>
 		<button class="button1 button2 but4" onclick="change(3)"><span>OPTIMAL </span></button>
 		<button class="button1 button2 but5" onclick="change(4)"><span>BELADY </span></button>
-		<button class="button1 button2 but6" onclick="change(5)"><span>PAGING </span></button>
+	<!-- 	<button class="button1 button2 but6" onclick="change(5)"><span>PAGING </span></button>
 		<button class="button1 button2 but7" onclick="change(6)"><span>MULTI </span></button>
 		<button class="button1 button2 but8" onclick="change(7)"><span>OPTI-SIZE </span></button>
-		
+		 -->
 		<button class="button1 button2 but9" onclick="change(8)"><span>SECOND</span></button>
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+</div>
 	</body>
 
 	<script>
