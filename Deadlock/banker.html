@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> Banker </title>
+ <head>
+ <title> Banker </title>
 	<script type="text/javascript" src="banker.js"></script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,100 +11,94 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  
 	<style>
-        h1, h2, h4,h5{
-            text-align: center;
-            }
-			   
-	</style>
-  </head>
-  <body data-gr-c-s-loaded="true">
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
+ h1, h2, h4,h5{
+ text-align: center;
+ }
+</style>
+ </head>
+ <body>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+ <div class="container-fluid">
  <div class="navbar-header">
-  <a class="navbar-brand" href="./os_sim.html">OS simulator</a>
-   </div>
-  <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
-     <li class="active"><a href="../wiki-sample/wiki.html">Wiki</a></li>
-   </ul>
-  </div>
+ <a class="navbar-brand" href="./os_sim.html">OS simulator</a>
+ </div>
+ <ul class="nav navbar-nav">
+ <li class="active"><a href="index.html">Go Back</a></li>
+ <li class="active"><a href="../wiki-sample/banker.txt">About Banker's Algorithm</a></li>
+ </ul>
+ </div>
 </nav>
 <br><br><br>
-<div class="page-header">
-   <h3 align="center">    Banker's Algorithm</h3>      
+<div class="page-header" >
+ <h1 style="float:center"> Banker's Algorithm</h1> 
 </div>
 
-    <div style="width: 100%;;margin-left:10px;text-align:left;">
-      <div style="float:left; margin-right:20px;">Number of Resources:</div>
-      <input style="width: 30px;float:left;margin-right:30px;border-radius: 25px;
-    border: 2px solid #609;
-    padding: 20px; 
-    width: 100px;
-    height: 15px; " id="totalres" onkeyup="addInitialRes()" type="text">
-	   	<button class="btn btn-primary btn-success" style="float:right;margin-right:20px; border-radius: 18px;
-    background: #609;
-    
-    width: 100px;
-    height: 50px;  " onclick="clear_data()">Clear</button>
-    </div>
-	<br><br>
-	<br><br>
-	<br><br>
-	<div id="resources" style="margin-left:10px;"><div style="width:auto;float:left;margin-right:50px;height:50px;"><div style="width:100px;float:left;">Resource 1</div><input id="res-1" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div><div style="width:auto;float:left;margin-right:50px;height:50px;"><div style="width:100px;float:left;">Resource 2</div><input id="res-2" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div></div>
-	<br><br>
-	<br><br>
-	<div id="table" style="margin-left:0px;">
-		<div style="width:50%; float:left;">
+ <div style = "width: 100%;;margin-left:10px;text-align:left;">
+ <div style="float:left; margin-right:20px;">Number of Resources:</div>
+ <input style = "width: 50px;float:left;margin-right:30px;
+  border: 2px solid blue; padding:10px;
+  width: 40px;
+  height: 20px;" id = "totalres" onkeyup="addInitialRes()" type="text">
+	<button class="btn btn-primary btn-success" style ="float:right;margin-right:20px; background: blue;" onclick="clear_data()" >Clear Data</button>
+ </div>
+ 
+	<br><br/>
+	<br><br/>
+	<br><br/>
+	<div id = "resources" style="margin-left:10px;"></div>
+	<br><br/>
+	<br><br/>
+	<div id = "table" style="margin-left:0px;">
+	<div style = "width:50%; float:left;">
 	
-		<div id="heading"></div>
-		<br>
-		<table id="tab" class="table bordered centered " style="border-color: black; border-width: 1px; bgcolor: white; ">
-			<thead id="inp-head"> 
-			</thead>
-			<tbody id="ptable">
-			</tbody>
-		</table>
-		</div>
-		<div style="width:50%; float:left;">
-			<div id="heading_alloc"></div>
-			<br>
-			<table id="tab_alloc" class="table bordered centered responsive-table " style="border-color: black; border-width: 1px; bgcolor: white; ">
-				<thead id="inp-head_alloc"> 
-				</thead>
-				<tbody id="ptable_alloc">
-				</tbody>
-			</table>
-		</div>
+	<div id="heading"></div>
+	<br>
+	<table id="tab" class="table bordered centered " style="border-color: black; border-width: 1px; bgcolor: white; ">
+	<thead id="inp-head"> 
+	</thead>
+	<tbody id="ptable">
+	</tbody >
+	</table>
 	</div>
-	<br><br>
-	<div id="inputsection"><div style="width:100%;margin-left:10px;float:left;"><card style="margin-left:10px;float:left;">Maximum Resources </card><div style="width:auto;float:left;margin-right:50px;height:50px;"><input id="MPR1" placeholder="R-1" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div><div style="width:auto;float:left;margin-right:50px;height:50px;"><input id="MPR2" placeholder="R-2" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div></div><div><card style="margin-left:20px;float:left;">Allocated Resources:   </card><div style="width:auto;float:left;margin-right:50px;height:50px;"><input placeholder="R-1" id="APR1" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div><div style="width:auto;float:left;margin-right:50px;height:50px;"><input placeholder="R-2" id="APR2" style="width: 30px;float:left;margin-right:30px;border-radius: 25px;border: 2px solid #609;padding: 20px; width: 30px;height: 3px;"></div></div><button onclick="addToList()" style="border-radius: 18px;background: #609;width: 150px;height: 50px; color:white">Add Process</button></div>
-	<br><br>
-	<br><br>
-	<div id="firs_alloc" style="margin-left:10px">
+	<div style = "width:50%; float:left;">
+	<div id="heading_alloc"></div>
+	<br>
+	<table id="tab_alloc" class="table bordered centered responsive-table " style="border-color: black; border-width: 1px; bgcolor: white; ">
+	<thead id="inp-head_alloc"> 
+	</thead>
+	<tbody id="ptable_alloc">
+	</tbody >
+	</table>
+	</div>
+	</div>
+	<br><br/>
+	<div id ="inputsection">
+	</div>
+	<br><br/>
+	<br><br/>
+	<div id="firs_alloc" style = "margin-left:10px">
 	
 	</div>
-	<div id="run" style="text-align:center;">
-	            <button class="btn btn-primary btn-success" onclick="banker()">Run</button>
+	<div id = "run" style="text-align:center;">
+	<button class="btn btn-primary btn-success" style = "background : blue;" onclick="banker()" >Run</button>
 	</div>
-	<br><br>
-	<br><br>
-	<div id="operations">
+	<br><br/>
+	<br><br/>
+	<div id = "operations" >
 	</div>
-		<br><br>
-		<div id="output1" style="text-align:center">
+	<br><br/>
+	<div id = "output1" style = "text-align:center">
 	</div>
-	<br><br>
-	<br><br>
-	<div id="output" style="text-align:center">
+	<br><br/>
+	<br><br/>
+	<div id = "output" style = "text-align:center">
 	
 	</div>
-	<br><br>
-	<br><br>
-	<div id="output2" style="text-align:center">
+	<br><br/>
+	<br><br/>
+	<div id = "output2" style = "text-align:center">
 	
 	</div>
-	<br><br>
-  
-
-</body>
+	<br><br/>
+ </body>
 </html>

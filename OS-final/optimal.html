@@ -11,8 +11,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	
 	</head>
-	<body>
-			<!--Header of soham--> 
+	<body style="background-color:cornsilk">
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 	   <div class="navbar-header">
@@ -26,11 +26,11 @@
 	  </nav>
 	  <br><br><br>
 	  <div class="page-header" >
-		 <h1 style="text-align:center;color:limegreen">PAGE REPALCEMENT ALGORITHM</h1> 
+		 <h1 style="text-align:center;color:limegreen">Page Replacement Algorithm</h1> 
 		    
 	  </div>
 	  <body>
-			<h1 style="text-align:center;color:limegreen"> OPTIMAL</h1>    
+			<h1 style="text-align:center;color:limegreen"> Optimal Page Replacement</h1>    
 	  <br>
 			<form>
 				<div class"container" >
@@ -62,8 +62,14 @@ function optimal()
  f = document.getElementById("frames").value;
  rs=document.getElementById("rs").value;
  rs=rs.split(' ');
+ if(f<=0){
+	 window.alert("Invalid number of frames");
+ }
+ if(!rs[0]){
+	 window.alert("Invalid request sequence");
+ }
 console.log(f);
-console.log(rs);
+console.log(rs[0]);
 var prev;
  pf=0;
  ph=0;
@@ -161,7 +167,7 @@ var index=-9999;
 		for ( i=0; i<row;i++)
 		  { 
 			var line =$("<tr></tr>");
-			// line.css({'background-color': getRandomColor()});  
+			// line.css({'background-color': rgba(255, 99, 71, 0.5)});  
 			  for(j=0; j<col;j++){
 		   
 			if(i==row-1) {

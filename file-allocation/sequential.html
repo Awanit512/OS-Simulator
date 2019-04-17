@@ -34,8 +34,7 @@
       <a class="navbar-brand" href="../index.html">OS simulator</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li class="active"><a href="#">Wiki</a></li>
+      <li class="active"><a href="../index.html">Home</a></li>
       <li class="active"><a href="index_page.html">File Allocation</a></li>
     </ul>
   </div>
@@ -44,7 +43,7 @@
 <center><h1 class="some" behavior="alternate" scrollamount=10>Sequential Allocation</h1></center>
 <div id="sequ">
 	<div class="visible1">
-	<p> Enter the size of memory(in KB)</p>
+	<p> Enter the size of memory(number of blocks)</p>
 	<input id="nof" type="number">
 	<button class="s_done" onclick="getSize()">Submit</button>
 
@@ -53,7 +52,7 @@
 	<div class="s_form s_hide" id="vis2">
 		<p> Please add file details </p>
 			File name:	<input  id="file_name" type="text">
-			File size(in KB):	<input  id="file_size" type="number">
+			File size(number of blocks):	<input  id="file_size" type="number">
 			<button class="s_done" onclick="addFile()">Add</button>
 			<br>
 	</div>
