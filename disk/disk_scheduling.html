@@ -458,9 +458,9 @@ color: white;
 	<button onclick="fcfsModal()" class=" w3-button trigger-btn graph1" data-toggle="modal" style="text-decoration:none;">FCFS</button>
 	<button onclick="sstfModal()" class=" w3-button trigger-btn graph2" data-toggle="modal" style="text-decoration:none;">SSTF</button>
 	<button onclick="scanModal()" class=" w3-button trigger-btn graph3" data-toggle="modal" style="text-decoration:none;">SCAN</button>
-	<button onclick="cscanModal()" class=" w3-button trigger-btn graph4" data-toggle="modal" style="text-decoration:none;">CSCAN</button>
+	<!--//<button onclick="cscanModal()" class=" w3-button trigger-btn graph4" data-toggle="modal" style="text-decoration:none;">CSCAN</button>-->
 	<button onclick="lookModal()" class=" w3-button trigger-btn graph5" data-toggle="modal" style="text-decoration:none;">LOOK</button>
-	<button onclick="clookModal()" class=" w3-button trigger-btn graph6" data-toggle="modal" style="text-decoration:none;">CLOOK</button>
+	<!--<button onclick="clookModal()" class=" w3-button trigger-btn graph6" data-toggle="modal" style="text-decoration:none;">CLOOK</button>-->
 	<h4 style="font-weight: bold;margin-top:7%;margin-left: 40%;"> X-axis: Request Track Number</h4>
 	<h4 style="font-weight: bold;margin-top:10px;margin-left: 40%;">Y-axis: Request Number</h4>
 </div>
@@ -1163,9 +1163,8 @@ function calculate_sstf()
 				{ label: "FCFS",  y: fcfs  },
 				{ label: "SSTF", y: sstf  },
 				{ label: "SCAN", y: scan  },
-				{ label: "CSCAN",  y: cscan  },
 				{ label: "LOOK",  y: look  },
-				{ label: "CLOOK",  y: clook  }
+
 			]
 		}
 		],
