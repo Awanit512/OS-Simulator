@@ -684,6 +684,11 @@ function calculate_fcfs()
  		var head = parseInt(document.getElementsByTagName("input")[0].value);
  		var max = parseInt(document.getElementsByTagName("input")[2].value);
  		var min = parseInt(document.getElementsByTagName("input")[1].value);
+		
+		if(head <= 0){
+			alert('please choose a value greater than 0');
+			return -10
+		}
  		
  		if(head > max)
  		{
