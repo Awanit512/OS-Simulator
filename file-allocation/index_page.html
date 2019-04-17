@@ -44,6 +44,7 @@
 				<h3>Select Your allocation-type</h3>
 				<div>
                     <p><strong>1. SEQUENTIAL:</strong><br> In this scheme, each file occupies a contiguous set of blocks on the disk. For example, if a file requires n blocks and is given a block b as the starting location, then the blocks assigned to the file will be: b, b+1, b+2,……b+n-1. This means that given the starting block address and the length of the file (in terms of blocks required), we can determine the blocks occupied by the file</p>
+                    
 
                     <img src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/Contiguous-Allocation.jpg" height=200px width=500px>
 
@@ -100,12 +101,47 @@
 				<div>
 					<p><strong>1. SEQUENTIAL:</strong><br> In this scheme, each file occupies a contiguous set of blocks on the disk. For example, if a file requires n blocks and is given a block b as the starting location, then the blocks assigned to the file will be: b, b+1, b+2,……b+n-1. This means that given the starting block address and the length of the file (in terms of blocks required), we can determine the blocks occupied by the file</p>
 
-                    
+                    <p>Advantages:
+					<ul>
+					<li>Both the Sequential and Direct Accesses are supported by this. For direct access, the address of the kth block of the file which starts at block b can easily be obtained as (b+k).</li>
+					<li>This is extremely fast since the number of seeks are minimal because of contiguous allocation of file blocks.</li>
+
+					</ul>
+					</p>
+					<p>Disadvantages:
+					<ul>
+					<li>This method suffers from both internal and external fragmentation. This makes it inefficient in terms of memory utilization.
+					<li>Increasing file size is difficult because it depends on the availability of contiguous memory at a particular instance.</ul></p>
 					  <center><a href="sequential.html" class="s_done">SIMULATE Sequential</a></center>
 					  	<p><strong>2. INDEXED:</strong><br>In this scheme, a special block known as the Index block contains the pointers to all the blocks occupied by a file. Each file has its own index block. The ith entry in the index block contains the disk address of the ith file block.</p> 
 
+					<p>Advantages:
+					<ul>
+					<li>This supports direct access to the blocks occupied by the file and therefore provides fast access to the file blocks.</li>
+					<li>It overcomes the problem of external fragmentation.</li>
+
+					</ul>
+					</p>
+					<p>Disadvantages:
+					<ul>
+					<li>The pointer overhead for indexed allocation is greater than linked allocation.
+					<li>For very small files, say files that expand only 2-3 blocks, the indexed allocation would keep one entire block (index block) for the pointers which is inefficient in terms of memory utilization. However, in linked allocation we lose the space of only 1 pointer per block.
+					</ul>
                        <center><a href="indexed.html" class="s_done">SIMULATE Indexed</a></center>
-                   		<p><strong>3. LINKED:</strong><br>In this scheme, each file is a linked list of disk blocks which need not be contiguous. The disk blocks can be scattered anywhere on the disk. The directory entry contains a pointer to the starting and the ending file block. Each block contains a pointer to the next block occupied by the file.</p>
+               		<p><strong>3. LINKED:</strong><br>In this scheme, each file is a linked list of disk blocks which need not be contiguous. The disk blocks can be scattered anywhere on the disk. The directory entry contains a pointer to the starting and the ending file block. Each block contains a pointer to the next block occupied by the file.</p>
+
+                   		<p>Advantages:
+					<ul>
+					<li>This is very flexible in terms of file size. File size can be increased easily since the system does not have to look for a contiguous chunk of memory.</li>
+					<li>This method does not suffer from external fragmentation. This makes it relatively better in terms of memory utilization.</li>
+
+					</ul>
+					</p>
+					<p>Disadvantages:
+					<ul>
+					<li>Because the file blocks are distributed randomly on the disk, a large number of seeks are needed to access every block individually. This makes linked allocation slower.
+					<li>It does not support random or direct access. We can not directly access the blocks of a file. A block k of a file can be accessed by traversing k blocks sequentially (sequential access ) from the starting block of the file via block pointers.
+						<li>Pointers required in the linked allocation incur some extra overhead.</ul></p>
 
 					   <center><a href="linked.html" class="s_done">SIMULATE Linked</a><br><br></center>
 
