@@ -273,7 +273,7 @@ function Dequeue(){
     if(i<stuff.length){
     var table = document.getElementById("ptable");
     console.log(stuff[i].wt);
-    $("#ptable").append("<tr><td>"+stuff[i].no+"</td><td>"+stuff[i].at+"</td><td>"+stuff[i].bt1+"</td><td>"+stuff[i].io+"</td><td>"+stuff[i].bt2+"</td><td>"+stuff[i].wt+"</td><td>"+stuff[i].tat+"</td></tr>");
+    $("#ptable").append("<tr><td>"+stuff[i].no+"</td><td>"+stuff[i].at+"</td><td>"+stuff[i].bt1+"</td><td>"+stuff[i].wt+"</td><td>"+stuff[i].tat+"</td></tr>");
     drawTable(i+1);
   }
   else
@@ -385,8 +385,7 @@ p{
       <th>PNO.</th>
       <th>Arrival Time </th>
       <th>Burst Time</th>
-<!--       <th>IO </th> -->
-<!--       <th>Burst Time 2 </th> -->
+
     </tr>
     <tbody id="ept">
     </tbody>
@@ -410,9 +409,8 @@ p{
   <tr id="thead">
   <th>PNO.</th>
   <th>Arrival time</th>
-  <th>Burst time1</th>
-<!--   <th>I/O time</th> -->
-<!--   <th>Burst time2</th> -->
+  <th>Burst time</th>
+
   <th>Waiting time</th>
   <th>Turn around time</th>
   </tr>
