@@ -2,16 +2,16 @@
 <html>
 <head>
 	<title>OPTIMAL</title>
-	
+
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-	
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	
+
 	</head>
-	<body style="background-color:cornsilk">
+	<body style="background-color:white">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
@@ -26,18 +26,18 @@
 	  </nav>
 	  <br><br><br>
 	  <div class="page-header" >
-		 <h1 style="text-align:center;color:limegreen">Page Replacement Algorithm</h1> 
-		    
+		 <h1 style="text-align:center;color:limegreen">Page Replacement Algorithm</h1>
+
 	  </div>
 	  <body>
-			<h1 style="text-align:center;color:limegreen"> Optimal Page Replacement</h1>    
+			<h1 style="text-align:center;color:limegreen"> Optimal Page Replacement</h1>
 	  <br>
 			<form>
 				<div class"container" >
 					<div class="form-group row" style="margin-left:40px;width:25vw;display:block">
 						<input type = "number" id="frames"class="form-control" placeholder="Enter the number of frames:">
 					</div>
-			
+
 					<div class="form-group row" style="margin-left:40px;width:25vw;display:block">
 							<input type = "text" id="rs" class="form-control" placeholder="Enter the Reference string:">
 					</div>
@@ -49,7 +49,7 @@
 			</form>
 			 </body>
 <script>
-		
+
 	var count=0;
 var pages = [];
 var pf;
@@ -78,17 +78,17 @@ var l;
 var farthest;
 var index=-9999;
 	var i,row=Number(f)+1,j,col=rs.length;
-	
+
 	pages = new Array(row);
 	for(i=0;i<row;i++)
 		pages[i]=new Array(col);
-	
+
 	for(i=0;i<row-1;i++)
-	{ 
+	{
     for(j=0 ; j<col;j++)
 		pages[i][j]= "--";
 	}
-	
+
 	for(j=0;j<col;j++)
 	{
 		var smallest=-1;
@@ -151,7 +151,7 @@ var index=-9999;
 		k++;
 		pf++;
 		console.log("pf=",pf);
-        }		
+        }
 		else
         {
         ph++;
@@ -165,33 +165,33 @@ var index=-9999;
 	$table.addClass('table table-striped');
 	$tbody = $("<tbody></tbody>");
 		for ( i=0; i<row;i++)
-		  { 
+		  {
 			var line =$("<tr></tr>");
-			// line.css({'background-color': rgba(255, 99, 71, 0.5)});  
+			// line.css({'background-color': rgba(255, 99, 71, 0.5)});
 			  for(j=0; j<col;j++){
-		   
+
 			if(i==row-1) {
-				   
-					
-					if(("PH".localeCompare(pages[i][j])==0)){	
+
+
+					if(("PH".localeCompare(pages[i][j])==0)){
 						line.append('<td style="color:green">'+'PH'+'</td>');
 					}
 					else{
 						line.append('<td style="color:red">'+'PF'+'</td>');
 					}
-				
+
 				$tbody.append(line);
-				
-				}      
+
+				}
 			else{
 				line.append($("<td></td>").html(pages[i][j]+""));
 				$tbody.append(line);
 			}
-		   
-			 
+
+
 			  }
 			}
-		  
+
 		  $table.append($tbody);
 		  $table.appendTo($("#div1"));
 		  $("#sp1").html('<p style="text-align:center">'+"<b>The no of page faults is:</b>"+"   "+'<span style="color:red">'+pf+'</span>'+'</p>')
@@ -211,7 +211,7 @@ var index=-9999;
 			  if(m==4){
 				  color='White';
 			  }
-			
+
 			return color;
 			 }
 			 console.log(m);

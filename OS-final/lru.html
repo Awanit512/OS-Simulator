@@ -6,7 +6,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	</head>
-<body  style="background-color:cornsilk">
+<body  style="background-color:white">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
@@ -21,11 +21,11 @@
 	  </nav>
 	  <br><br><br>
 	  <div class="page-header" >
-		 <h1 style="text-align:center;color:limegreen">PAGE REPLACEMENT ALGORITHM</h1> 
-		    
+		 <h1 style="text-align:center;color:limegreen">PAGE REPLACEMENT ALGORITHM</h1>
+
 	  </div>
 	  <body>
-			<h1 style="text-align:center;color:limegreen"> LRU</h1>    
+			<h1 style="text-align:center;color:limegreen"> LRU</h1>
 	  <br>
 <br>
 <form>
@@ -48,7 +48,7 @@
 </html>
 
 <script>
-		
+
 	var count=0;
 var pages = [];
 var pf;
@@ -70,17 +70,17 @@ var l;
 var least;
 var index;
 	var i,row=Number(f)+1,j,col=rs.length;
-	
+
 	pages = new Array(row);
 	for(i=0;i<row;i++)
 		pages[i]=new Array(col);
-	
+
 	for(i=0;i<row-1;i++)
-	{ 
+	{
     for(j=0 ; j<col;j++)
 		pages[i][j]= "--";
 	}
-	
+
 	for(j=0;j<col;j++)
 	{
 		var smallest=-1;
@@ -121,26 +121,26 @@ var index;
 			  			least = l;
 			  			break;
 			  		}
-			  		
+
 			  	}
 			  	if(index > least)
 			  		index = least;
-			  	
+
 			  }
-			  
+
 			  for(i=0;i<row-1;i++)
 			  {
 			  	if(pages[i][j]==rs[index])
 			  		break;
 			  }
-			  
+
 			  pages[i][j] = rs[k];
 			}
 		pages[row-1][j]="PF";
 		k++;
 		pf++;
 		console.log("pf=",pf);
-        }		
+        }
 		else
         {
         ph++;
@@ -154,33 +154,33 @@ var index;
 	$table.addClass('table table-striped');
 	$tbody = $("<tbody></tbody>");
 		for ( i=0; i<row;i++)
-		  { 
+		  {
 			var line =$("<tr></tr>");
-			// line.css({'background-color': getRandomColor()});  
+			// line.css({'background-color': getRandomColor()});
 			  for(j=0; j<col;j++){
-		   
+
 			if(i==row-1) {
-				   
-					
-					if(("PH".localeCompare(pages[i][j])==0)){	
+
+
+					if(("PH".localeCompare(pages[i][j])==0)){
 						line.append('<td style="color:green">'+'PH'+'</td>');
 					}
 					else{
 						line.append('<td style="color:red">'+'PF'+'</td>');
 					}
-				
+
 				$tbody.append(line);
-				
-				}      
+
+				}
 			else{
 				line.append($("<td></td>").html(pages[i][j]+""));
 				$tbody.append(line);
 			}
-		   
-			 
+
+
 			  }
 			}
-		  
+
 		  $table.append($tbody);
 		  $table.appendTo($("#div1"));
 		  $("#sp1").html('<p style="text-align:center">'+"<b>The no of page faults is:</b>"+"   "+'<span style="color:red">'+pf+'</span>'+'</p>')
@@ -200,7 +200,7 @@ var index;
 			  if(m==4){
 				  color='LightGray';
 			  }
-			
+
 			return color;
 			 }
 			 console.log(m);

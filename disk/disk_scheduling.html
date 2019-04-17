@@ -12,7 +12,7 @@
 <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
 		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
 		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
- 
+
 <style>
 .tdm-abc {
     display: block;
@@ -32,7 +32,7 @@ display:none;
 
 .tdm-choices
 {
-	background-color: #19181a; 
+	background-color: #19181a;
 	color:white;
 	font-weight:bold;
 }
@@ -71,8 +71,8 @@ display:none;
 }
 
 .button1 {
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
     border: 2px solid #4CAF50;
     padding: 16px 32px;
     text-align: center;
@@ -89,8 +89,8 @@ display:none;
 }
 
 .button2 {
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
     border: 2px solid #008CBA;
     padding: 16px 32px;
     text-align: center;
@@ -107,8 +107,8 @@ display:none;
 }
 
 .button3 {
-    background-color: white; 
-    color: #05386b; 
+    background-color: white;
+    color: #05386b;
     border: 2px solid red;
     padding: 16px 32px;
     text-align: center;
@@ -178,8 +178,8 @@ display:none;
 
 
 .button-checked1{
-	background-color: #4CAF50; 
-    color: white; 
+	background-color: #4CAF50;
+    color: white;
     border: 2px solid #4CAF50;
     padding: 16px 32px;
     text-align: center;
@@ -191,8 +191,8 @@ display:none;
 }
 
 .button-checked2{
-	background-color: #008CBA; 
-    color: white; 
+	background-color: #008CBA;
+    color: white;
     border: 2px solid #008CBA;
     padding: 16px 32px;
     text-align: center;
@@ -204,8 +204,8 @@ display:none;
 }
 
 .button-checked4{
-	background-color: #5cdb95; 
-    color: #05386b; 
+	background-color: #5cdb95;
+    color: #05386b;
     border: 2px solid #5cdb95;
     padding: 16px 32px;
     text-align: center;
@@ -217,8 +217,8 @@ display:none;
 }
 
 .button-checked3{
-	background-color: red; 
-    color: white; 
+	background-color: red;
+    color: white;
     border: 2px solid red;
     padding: 16px 32px;
     text-align: center;
@@ -230,8 +230,8 @@ display:none;
 }
 
 .button-checked5{
-	background-color: #555555; 
-    color: white; 
+	background-color: #555555;
+    color: white;
     border: 2px solid #555555;
     padding: 16px 32px;
     text-align: center;
@@ -243,8 +243,8 @@ display:none;
 }
 
 .button-checked6{
-	background-color: orange; 
-    color: white; 
+	background-color: orange;
+    color: white;
     border: 2px solid orange;
     padding: 16px 32px;
     text-align: center;
@@ -271,14 +271,14 @@ display:none;
 body{
 	 font-family: "Times New Roman", Times, serif;
 	 animation-name: FadeOut;
-	 animation-duration: 2s;  
+	 animation-duration: 2s;
 }
 h2{
-	font-family: "impact", Times, serif;	
+	font-family: "impact", Times, serif;
 }
 
 .options button{
-	font-family: "courier new", Times, serif;	
+	font-family: "courier new", Times, serif;
 	font-size:20px;
 	font-weight: bold;
 }
@@ -310,7 +310,7 @@ border-radius:solid 2px #008CBA;
 }
 
 .graph2{
-margin-left:8%;	
+margin-left:8%;
 position:relative;
 width:100px;
 height:40px;
@@ -320,17 +320,17 @@ border:solid 2px #008CBA;
 }
 
 .graph3{
-margin-left:8%;	
+margin-left:8%;
 position:relative;
 width:100px;
-height:40px;	
+height:40px;
 background-color: red;
 color: white;
 border:solid 2px red;
 }
 
 .graph4{
-margin-left:8%;	
+margin-left:8%;
 position:relative;
 width:100px;
 height:40px;
@@ -340,7 +340,7 @@ border-radius: solid 2px #5cdb95;
 }
 
 .graph5{
-margin-left:8%;	
+margin-left:8%;
 position:relative;
 width:100px;
 height:40px;
@@ -351,7 +351,7 @@ border: solid 2px #555555;
 
 .graph6{
 
-margin-left:8%;	
+margin-left:8%;
 position:relative;
 width:100px;
 height:40px;
@@ -368,13 +368,13 @@ border:solid 2px orange;
 	margin-left: 20%;
 	margin-top: 5%;
 	border-radius: 8px;
-	
+
 color: white;
 }
 </style>
 
 </head>
-<body style="background-color: cornsilk">
+<body style="background-color: white">
 
 
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -480,7 +480,7 @@ color: white;
 	<p id="input_clook"></p>
 </body>
 
-<script> 
+<script>
 
 var x=2,max_val;
 function myFunction() {
@@ -639,7 +639,7 @@ function calculate()
 		alert("invalid cylinder numbers");
 		return;
 	}
-	
+
 	var fcfsv=0,sstfv=0,scanv=0,cscanv=0,lookv=0,clookv=0;
 
 
@@ -670,26 +670,26 @@ function show_graph_section(){
 	f.setAttributeNode(att);
 }
 var dp_fcfs = []; var dp_sstf = [];  var dp_scan = []; var dp_cscan = []; var dp_look = [];  var dp_clook = [];
-var fcfs_values=[]; var sstf_values=[]; var scan_values = []; var cscan_values=[]; var look_values = []; var clook_values = []; 
+var fcfs_values=[]; var sstf_values=[]; var scan_values = []; var cscan_values=[]; var look_values = []; var clook_values = [];
 
 function calculate_fcfs()
 	{
-	
+
 		var i;
 		var sum=0;
 		var diff;
 		var z;
 		var y_i = -1;
-		
+
  		var head = parseInt(document.getElementsByTagName("input")[0].value);
  		var max = parseInt(document.getElementsByTagName("input")[2].value);
  		var min = parseInt(document.getElementsByTagName("input")[1].value);
-		
+
 // 		if(head <= 0){
 // 			alert('please choose a value greater than 0');
 // 			return -10
 // 		}
- 		
+
  		if(head > max)
  		{
  			alert("fcfs head is larger than last cylinder number");
@@ -701,7 +701,7 @@ function calculate_fcfs()
  			alert("fcfs head is smaller than first cylinder number");
  			return -10;
  		}
- 		
+
  		/*dp_fcfs.push({x:head , y:0});*/
  		y_i++;
  		//dp_fcfs.push([head,y_i]);
@@ -792,7 +792,7 @@ function calculate_sstf()
 			for(var i=1;i<=x-2;++i)
 			{
 				diff = head - in_arr[i];
-				
+
 				if(diff < 0)
 					diff = diff *(-1);
 
@@ -801,7 +801,7 @@ function calculate_sstf()
 					min = diff;
 					flag = i;
 					//here we push the variables for the graph
-					
+
 				}
 			}
 			sum = sum + min;
@@ -814,7 +814,7 @@ function calculate_sstf()
 		allocate_sstf();
 		return sum;
 	}
-	
+
 	function calculate_scan()
 	{
 		var in_arr=[];
@@ -836,9 +836,9 @@ function calculate_sstf()
  			return -10;
  		}
 		scan_values.push(head);
-		
+
 		var max = document.getElementsByTagName("input")[2].value;
-		
+
 		for(var i=3;i<=x;++i)
 		{
 			var z= parseInt(document.getElementsByTagName("input")[i].value);
@@ -858,14 +858,14 @@ function calculate_sstf()
 
 		//sort the inputs
 		in_arr.sort(function(a, b){return a - b});
-		
+
 		sum = sum + (max - head);
-		
+
 		var temp;
 		var i,j,flag;
 
-		for(i=in_arr.length-1;i>=0;--i)	
-		{			
+		for(i=in_arr.length-1;i>=0;--i)
+		{
 			var p = parseInt(in_arr[i]);
 			if(p < head)
 			{
@@ -881,7 +881,7 @@ function calculate_sstf()
 			p_i = parseInt(in_arr[j]);
             scan_values.push(p_i);
 		}
-		
+
 		y_i++;
 		scan_values.push(max);
 
@@ -919,9 +919,9 @@ function calculate_sstf()
  			return -10;
  		}
 		cscan_values.push(head);
-		
+
 		var max = document.getElementsByTagName("input")[2].value;
-		
+
 		for(var i=3;i<=x;++i)
 		{
 			var z= parseInt(document.getElementsByTagName("input")[i].value);
@@ -941,14 +941,14 @@ function calculate_sstf()
 
 		//sort the inputs
 		in_arr.sort(function(a, b){return a - b});
-		
+
 		sum = sum + (max - head);
-		
+
 		var temp;
 		var i,j,flag;
 
-		for(i=in_arr.length-1;i>=0;--i)	
-		{			
+		for(i=in_arr.length-1;i>=0;--i)
+		{
 			var p = parseInt(in_arr[i]);
 			if(p < head)
 			{
@@ -1000,7 +1000,7 @@ function calculate_sstf()
  		}
 		look_values.push(head);
 		var max = document.getElementsByTagName("input")[2].value;
-		
+
 		for(var i=3;i<=x;++i)
 		{
 			var z= parseInt(document.getElementsByTagName("input")[i].value);
@@ -1017,14 +1017,14 @@ function calculate_sstf()
 			}
 			in_arr.push(z);
 		}
-	
+
 		//sort the inputs
 		in_arr.sort(function(a, b){return a - b});
 		in_arr.sort(function(a, b){return a - b});
 
 		var i,j,flag;
-		for(i=in_arr.length-1;i>=0;--i)	
-		{			
+		for(i=in_arr.length-1;i>=0;--i)
+		{
 			var p = parseInt(in_arr[i]);
 			if(p < head)
 			{
@@ -1048,7 +1048,7 @@ function calculate_sstf()
 		}
 
 		var int = parseInt(in_arr[x-3]);	//last element
-		sum = sum + (int - head); 
+		sum = sum + (int - head);
 
 		var int = parseInt(in_arr[x-3]);
 		var int2 = parseInt(in_arr[0]);
@@ -1057,7 +1057,7 @@ function calculate_sstf()
 		allocate_look();
 		return sum;
 	}
-	
+
 	function calculate_clook()
 	{
 		var in_arr=[];
@@ -1078,9 +1078,9 @@ function calculate_sstf()
  			return -10;
  		}
 		clook_values.push(head);
-		
+
 		var max = document.getElementsByTagName("input")[2].value;
-		
+
 		for(var i=3;i<=x;++i)
 		{
 			var z= parseInt(document.getElementsByTagName("input")[i].value);
@@ -1100,16 +1100,16 @@ function calculate_sstf()
 
 		//sort the inputs
 		in_arr.sort(function(a, b){return a - b});
-		
+
 		var len = in_arr.length-1;
 		var p = parseInt(in_arr[len]);
 		sum = sum + (p - head);
-		
+
 		var temp;
 		var i,j,flag;
 
-		for(i=in_arr.length-1;i>=0;--i)	
-		{			
+		for(i=in_arr.length-1;i>=0;--i)
+		{
 			var p = parseInt(in_arr[i]);
 			if(p < head)
 			{
@@ -1148,22 +1148,22 @@ function calculate_sstf()
                 "#86C232",
                 "#FFE400",
                 "#FF652F",
-                "red"                
+                "red"
                 ]);
     }
 
 	function show_graph(fcfs,sstf,scan,cscan,look,clook)
 	{
-		
+
 		var chart = new CanvasJS.Chart("chartContainer", {
 		title:{
-			text: "RESULTS OF DISK SCHEDULING ALGORITHMS"              
+			text: "RESULTS OF DISK SCHEDULING ALGORITHMS"
 		},
-		
-		data: [              
+
+		data: [
 		{
 			// Change type to, "line", "splineArea", etc.
-			type: "column",				
+			type: "column",
 			dataPoints: [
 				{ label: "FCFS",  y: fcfs  },
 				{ label: "SSTF", y: sstf  },
@@ -1186,8 +1186,8 @@ function calculate_sstf()
 	}
 
 
-	//example of datapoints_fcfs:- 
-		
+	//example of datapoints_fcfs:-
+
 	function allocate_fcfs(){
 		var d=-1;
 		for(var i=0;i<fcfs_values.length;++i)
@@ -1196,7 +1196,7 @@ function calculate_sstf()
 			var a = parseInt(fcfs_values[i]);
 			dp_fcfs.push([a,d]);
 		}
-		
+
 	}
 
 	function allocate_sstf(){
@@ -1272,8 +1272,8 @@ function calculate_sstf()
 		var data_clook={
 			values:dp_clook
 		};
-	
-    
+
+
 	function fcfsModal()
 	{
 		var max_val = document.getElementsByTagName("input")[2].value;
@@ -1303,7 +1303,7 @@ function calculate_sstf()
         		"title":"Request Number"
         }
     	});
-		
+
 	}
 
 
@@ -1344,7 +1344,7 @@ function calculate_sstf()
                 data_scan
             ]
         }
-    	});	
+    	});
 	}
 
 	function cscanModal()
@@ -1405,7 +1405,7 @@ function calculate_sstf()
             ]
         }
     	});
-			
+
 	}
 </script>
 

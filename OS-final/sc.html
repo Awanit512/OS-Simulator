@@ -26,10 +26,10 @@
 </nav>
 <br><br><br>
 <div class="page-header" >
-   <h1 style="text-align:center;color:limegreen">Page Replacement Algorithm</h1>      
+   <h1 style="text-align:center;color:limegreen">Page Replacement Algorithm</h1>
 </div>
-<body  style="background-color:cornsilk">
-<h1 style="text-align:center;color:limegreen">Second Chance (Clock) Algorithm</h1>      
+<body  style="background-color:white">
+<h1 style="text-align:center;color:limegreen">Second Chance (Clock) Algorithm</h1>
 <br>
 <form>
     <div class"container">
@@ -77,19 +77,19 @@ var prev;
 var k=0;
 var n=0;
 	var i,row=Number(f)+1,j,col=rs.length;
-	
+
 	pages = new Array(row);
 	for(i=0;i<row;i++)
 		pages[i]=new Array(col);
 	var ref = [];
 	ref = new Array(row-1);
-	
+
 	for(i=0;i<row-1;i++)
-	{ 
+	{
     for(j=0 ; j<col;j++)
 		pages[i][j]= "--";
 	}
-	
+
 	for(j=0;j<col;j++)
 	{
 		var smallest=-1;
@@ -149,7 +149,7 @@ var n=0;
 		k++;
 		pf++;
 		console.log("pf=",pf);
-        }		
+        }
 		else
         {
         ph++;
@@ -164,33 +164,33 @@ var $table=$("<table border='1'></table>");
 $table.addClass('table table-striped');
 $tbody = $("<tbody></tbody>");
 	for ( i=0; i<row;i++)
-	  { 
+	  {
         var line =$("<tr></tr>");
-        // line.css({'background-color': rgba(255, 99, 71, 0.5)});  
+        // line.css({'background-color': rgba(255, 99, 71, 0.5)});
 	  	for(j=0; j<col;j++){
-       
+
         if(i==row-1) {
-           	
-				
-                if(("PH".localeCompare(pages[i][j])==0)){	
+
+
+                if(("PH".localeCompare(pages[i][j])==0)){
 					line.append('<td style="color:green">'+'PH'+'</td>');
                 }
                 else{
 					line.append('<td style="color:red">'+'PF'+'</td>');
 				}
-			
+
 			$tbody.append(line);
-            
-			}      
+
+			}
         else{
             line.append($("<td></td>").html(pages[i][j]+""));
             $tbody.append(line);
         }
-       
-	     
+
+
           }
         }
-	  
+
       $table.append($tbody);
 	  $table.appendTo($("#div"));
 	  $("#sp1").html('<p style="text-align:center">'+"<b>The no of page faults is:</b>"+"   "+'<span style="color:red">'+pf+'</span>'+'</p>')
@@ -210,7 +210,7 @@ $tbody = $("<tbody></tbody>");
 		  if(m==4){
 			  color='white';
 		  }
-		
+
 		return color;
 		 }
 		 console.log(m);
